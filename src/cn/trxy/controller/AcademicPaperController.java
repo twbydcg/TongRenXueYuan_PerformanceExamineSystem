@@ -13,7 +13,16 @@ import javax.servlet.http.HttpServletResponse;
 public class AcademicPaperController extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
+	private String username;
 	
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
 	//doPost·½·¨
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
@@ -27,7 +36,7 @@ public class AcademicPaperController extends HttpServlet {
 	}
 	
 	public String paperRegiter(){
-		
+		System.out.println(this.getUsername());
 		return "index";
 	}
 	
