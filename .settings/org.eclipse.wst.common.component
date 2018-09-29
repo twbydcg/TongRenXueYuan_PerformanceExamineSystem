@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="TongRenXueYuan_PerformanceExamineSystem">
+        <wb-resource deploy-path="/" source-path="/WebRoot" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <property name="java-output-path" value="/TongRenXueYuan_PerformanceExamineSystem/WebRoot/WEB-INF/classes"/>
+        <property name="context-root" value="TongRenXueYuan_PerformanceExamineSystem"/>
+    </wb-module>
+</project-modules>
