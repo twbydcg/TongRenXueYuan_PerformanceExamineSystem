@@ -54,8 +54,8 @@ public class DBConnection {
 	
 	//返回单列数据库连接对象 Connection
 	public static Connection getConnection(){
-		new DBConnection();
 		if(connection==null){
+			new DBConnection();
 			try {
 				connection=DriverManager.getConnection(DBConnection.url, DBConnection.user, DBConnection.password);
 			} catch (SQLException e) {
