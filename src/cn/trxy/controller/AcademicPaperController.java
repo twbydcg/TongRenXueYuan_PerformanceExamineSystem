@@ -26,4 +26,9 @@ public class AcademicPaperController extends HttpServlet {
 		super.doGet(req, resp);
 	}
 	
+	public String paperRegiter(){
+		
+		return "index";
+	}
+	
 }
