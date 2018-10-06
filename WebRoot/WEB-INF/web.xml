@@ -17,4 +17,14 @@
     <filter-name>struts2</filter-name>
     <url-pattern>*.action</url-pattern>
   </filter-mapping>
+  
+  <!--验证码  -->
+  <servlet>
+    <servlet-name>SecurityCode</servlet-name>
+    <servlet-class>cn.trxy.utils.SecurityCode</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SecurityCode</servlet-name>
+    <url-pattern>/trxypes/SecurityCode</url-pattern>
+  </servlet-mapping>
 </web-app>

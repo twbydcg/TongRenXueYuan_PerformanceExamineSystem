@@ -15,9 +15,9 @@ public class AcademyDao {
 	private ResultSet resultSet=null;
 	private Statement statement=null;
 	
-	/*
+	/**
 	 * 根据id查询学院
-	 * return 传入id所对应的学院
+	 * @return 传入id所对应的学院
 	 * */
 	public AcademyBean getByIdAcademy(int id){
 		AcademyBean academyBean=new AcademyBean();
@@ -35,9 +35,9 @@ public class AcademyDao {
 		return academyBean;
 	}
 	
-	/*
+	/**
 	 * 查询所有学院
-	 * return 所有学院
+	 * @return 所有学院
 	 * */
 	public List<AcademyBean> getAllAcademy(){
 		connection= DBConnection.getConnection();
