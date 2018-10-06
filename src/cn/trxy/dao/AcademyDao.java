@@ -60,11 +60,5 @@ public class AcademyDao {
 		
 		return list;
 	}
-	
-	public static void main(String[] args) {
-		AcademyDao academyDao=new AcademyDao();
-		academyDao.getByIdAcademy(5);
-		//academyDao.getAllAcademy();
-	}
 
 }
