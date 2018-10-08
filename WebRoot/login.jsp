@@ -1,9 +1,14 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
 <!DOCTYPE html>
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>竟聘系统</title>
     <!-- 引入Bootstrap核心样式文件（必须） -->
@@ -11,20 +16,18 @@
 
     <!-- 自己的样式或其他文件 -->
     <link rel="stylesheet" href="css/login.css">
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <style type="text/css">
+    .col-sm-3:hover{cursor: pointer;}
+    </style>
+
 </head>
-<body onload="init();" style="overflow-x:hidden">
+<body style="overflow-x:hidden">
 <!-- 顶部图片 -->
 <div class="center-block overflow-hidden">
-
     <img src="res/photo/SuCai03.png" class="center-img" calt="Responsive image">
     <img src="res/photo/logo-TongRen.png" id="logo-TongRen">
     <h3 id="Title-h3">铜仁学院</h3>
     <h1 id="Title-h1">竟聘考核系统</h1>
-
 </div>
 
 <!-- /顶部图片 -->
@@ -111,7 +114,11 @@
                     <div class="col-sm-6">
                         <input class="form-control" type="text" title="请输入验证码" required placeholder="输入验证码">
                     </div>
-                        <canvas id="canvas" class="col-sm-3 control-label" width="100%" height="50px"></canvas>
+                    
+                    <div class="col-sm-3">
+                    	<img alt="" src="<%=path %>/trxypes/SecurityCode"  onclick="changCode(this)" />
+                    </div>
+                        
 
                 <!--  忘记密码按钮-->
 
@@ -125,8 +132,8 @@
         </div>
         </div>
     </div>
-</div>
 <!--  /内容部分  -->
+
 <!--  脚注部分  -->
 <footer class="bs-docs-footer">
     <div class="container">
@@ -147,5 +154,11 @@
 <!-- 自己的脚本文件 -->
 
 <script src="js/login.js"></script>
+<script type="text/javascript">
+//点击改变验证码
+function changCode(obj){
+	obj.src="<%=path %>/trxypes/SecurityCode?arg="+Math.random();
+}
+</script>
 </body>
 </html>
