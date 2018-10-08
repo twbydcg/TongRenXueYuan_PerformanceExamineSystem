@@ -71,7 +71,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     <p>这是一个div id=page2  class=login-left-tab</p>
                     <p>当内容没有超出范围则隐藏滚动条</p>
                     <p>否则显示滚动条</p>
-
                 </div>
             </div>
         </div>
@@ -91,25 +90,22 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     </div>
 
                 <!-- 职工号-->
-
                     <label for="workerNum" class="col-sm-3 control-label">职工号</label>
                     <div class="col-sm-9">
                             <input type="text" class="form-control"  id="workerNum"
                                    title="职工号应为5~12位数字" maxlength="10" autofocus pattern="[0-9]{5,12}"
-                                   required placeholder="职工号" >
+                                   required placeholder="职工号"  name="account">
                     </div>
 
                 <!-- 密码-->
-
                     <label for="userPassword" class="col-sm-3 control-label">密码</label>
                     <div class="col-sm-9">
-                         <input type="password" class="form-control" id="userPassword"  placeholder="Password"
+                         <input type="password" class="form-control" id="userPassword"  placeholder="Password" name="password"
                                 maxlength="10" required pattern="^[a-zA-Z]\w{5,17}$"
                                 title="字母开头，长度在6~18之间，只能包含字母、数字和下划线"  onkeyup="value=value.replace(/[^a-zA-Z0-9]/g,'')">
                     </div>
 
                 <!-- 验证码-->
-
                     <label for="userPassword" class="col-sm-3 control-label">验证码</label>
                     <div class="col-sm-6">
                         <input class="form-control" type="text" title="请输入验证码" required placeholder="输入验证码">
@@ -121,11 +117,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                         
 
                 <!--  忘记密码按钮-->
-
                     <a href="#" class="col-sm-offset-3 col-xs-offset-1">忘记密码？</a>
 
                 <!-- 登录按钮-->
-
                     <input class="btn btn-lg btn-primary col-sm-6 col-xs-12 col-sm-offset-3 " type="submit" value="登 录">
                 </div>
             </form>
