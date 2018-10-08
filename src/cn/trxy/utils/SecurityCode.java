@@ -9,13 +9,13 @@ import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
-//import java.io.PrintWriter;
 
 import javax.imageio.ImageIO;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 
 public class SecurityCode extends HttpServlet {
 
@@ -33,13 +33,7 @@ public class SecurityCode extends HttpServlet {
 
 	
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
 		doPost(request, response);
-//		response.setContentType("text/html");
-//		PrintWriter out = response.getWriter();
-//		
-//		out.flush();
-//		out.close();
 	}
 
 	
@@ -102,7 +96,6 @@ public class SecurityCode extends HttpServlet {
 	
 	//生成颜色方法
     private Color getColor() {
-    	//随机生成干扰线的颜色
     	int red=(int)Math.ceil(Math.random()*255);
     	int blue=(int)Math.ceil(Math.random()*255);
     	int green=(int)Math.ceil(Math.random()*255);
