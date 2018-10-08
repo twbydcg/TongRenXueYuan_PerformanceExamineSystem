@@ -1,0 +1,241 @@
+/**
+    公共区域
+ */
+@-moz-document url-prefix() {
+    fieldset { display: table-cell; }
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+/**
+    /公共区域
+ */
+/**
+   <---  顶部图片区域         -->
+ */
+
+/**
+    图片居中
+ */
+.center-img{
+    width: 1280px;
+    margin: 0 calc( 50% - 640px );
+
+}
+/**
+   消除溢出元素
+ */
+.overflow-hidden{
+    overflow:hidden;
+}
+
+#logo-TongRen{  /*铜仁学院图标*/
+    position: absolute;
+    width: 200px;
+    top: 30px;
+    right: 30px;
+}
+
+#Title-h3{      /*学院标题*/
+    position: absolute;
+    display: block;
+    top: 180px;
+    text-align: center;
+    right: 220px;
+    font-weight: bold;
+    text-shadow:#000 1px 0 0,#000 0 1px 0,#000 -1px 0 0,#000 0 -1px 0;
+    *filter: Glow(color #000, strength 1);
+    color: #fff;
+    cursor: default;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+#Title-h1{      /*系统标题*/
+    position: absolute;
+    display: block;
+    top: 220px;
+    text-align: center;
+    right: 100px;
+    cursor: default;
+    font-weight: bold;
+    text-shadow:#000 1px 0 0,#000 0 1px 0,#000 -1px 0 0,#000 0 -1px 0;
+
+    *filter: Glow(color  #000, strength  1);
+    color: #fff;
+
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+
+/**
+   <---  /顶部图片区域         -->
+ */
+
+/**
+   <---  中部内容区域         -->
+ */
+.title-line{
+    width: 100%;
+    height: 28px;
+    margin: 0 auto;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 28px;
+    text-align: center;
+}
+.title-line > .title{
+    height: 56px;
+    line-height: 56px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-size: 40px;
+    background: #fff;
+    text-align: center;
+}
+
+.login-box{
+
+}
+.login-box > .login-left{
+    height: 500px;
+
+}
+.login-box > .login-line{
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 500px;
+    border-right: 2px solid #ddd;
+    z-index: -1;
+}
+.login-box > .login-right{
+    height: 500px;
+}
+.login-right-head{
+    height: 20%;
+}
+.login-left-head{
+    width: 100%;
+    height: 2em;
+    border-bottom: 1px  solid #737373;
+
+}
+.login-left-head > ul >li{
+    float: left;
+    list-style: none;
+}
+.login-left-body{
+    height: 90%;
+}
+.login-left-tab{
+    height: 100%;
+    overflow: auto;
+    border: 1px solid #737373;
+}
+.tab-title{
+    margin: 0px;
+    line-height: 50px;
+    height:50px;
+}
+.a-bolck {
+    display: block;
+    width: 80px;
+    height: 28px;
+    text-align: center;
+    float: left;
+    line-height: 28px;
+    padding: 0px 2px;
+    text-decoration: none;
+
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+.a-bolck:hover{
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+    /**
+       <---  /中部内容区域         -->
+     */
+/**
+   <---  底部区域         -->
+ */
+.bs-docs-footer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 100px;
+    color: #99979c;
+    text-align: center;
+    background-color: #2a2730;
+}
+
+.bs-docs-footer-links {
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+.bs-docs-footer-links li {
+    display: inline-block;
+}
+
+.bs-docs-footer-links li+li {
+    margin-left: 15px;
+}
+
+.bs-docs-footer a {
+    color: #fff;
+}
+
+@media (min-width: 768px) {
+    .bs-docs-footer {
+        text-align: left;
+    }
+    .bs-docs-footer p {
+        margin-bottom: 0;
+    }
+}
+/**
+   <---  /底部区域         -->
+ */
+
+
+/**
+   媒体查询
+ */
+
+@media screen and (max-width: 500px) {  /*屏幕小于500pxs时*/
+    #logo-TongRen{
+        position: absolute;
+        width: 40%;
+        top: 30px;
+        right: 30px;
+    }
+    #Title-h3{
+        width: 1em;
+        top: 100px;
+        left: 5px;
+        color: #fff;
+    }
+    #Title-h1{
+        width: 1em;
+        top: 1em;
+        left: 1em;
+        color: #fff;
+    }
+}
+
+@media screen and (min-width: 1280px) { /*屏幕大于1280pxs时*/
+    .center-img{
+        width: 100%;
+        margin: 0 ;
+    }
+}

@@ -1,0 +1,530 @@
+/**
+    公共区域
+ */
+@-moz-document url-prefix() {
+    fieldset {
+        display: table-cell;
+    }
+}
+
+/**
+    /公共区域
+ */
+/**
+   <---  顶部图片区域         -->
+ */
+
+/**
+    图片居中
+ */
+.center-img {
+    width: 1280px;
+    margin: 0 calc(50% - 640px);
+
+}
+
+/**
+   消除溢出元素
+ */
+.overflow-hidden {
+    overflow: hidden;
+}
+
+#logo-TongRen { /*铜仁学院图标*/
+    position: absolute;
+    width: 200px;
+    top: 30px;
+    right: 30px;
+}
+
+#Title-h3 { /*学院标题*/
+    position: absolute;
+    display: block;
+    top: 180px;
+    text-align: center;
+    right: 220px;
+    font-weight: bold;
+    text-shadow: #000 1px 0 0, #000 0 1px 0, #000 -1px 0 0, #000 0 -1px 0;
+    *filter: Glow(color #000, strength 1);
+    color: #fff;
+}
+
+#Title-h1 { /*系统标题*/
+    position: absolute;
+    display: block;
+    top: 220px;
+    text-align: center;
+    right: 100px;
+    font-weight: bold;
+    text-shadow: #000 1px 0 0, #000 0 1px 0, #000 -1px 0 0, #000 0 -1px 0;
+
+    *filter: Glow(color #000, strength 1);
+    color: #fff;
+}
+
+/**
+   <---  /顶部图片区域         -->
+ */
+
+/**
+   <---  中部内容区域         -->
+ */
+
+body {
+    position: relative;
+    overflow-x: hidden
+}
+
+body, html {
+    height: 100%;
+    background-color: #583e7e
+}
+.nvabar-left{
+    padding: 20px;
+}
+
+.meun-button{               /* 菜单控制按钮 */
+    padding: 0px;
+}
+.meun-button > button{
+    width: 100%;
+}
+
+
+.meun{                      /*一级菜单样式*/
+    padding: 0px;
+    width: 100%;
+}
+.meun > li,.meun > li a{
+    display: block;
+}
+.meun > li a {
+    padding: 10px 0px;
+    color: #0f0f0f;
+    border-bottom: 1px solid #2A752E;
+    letter-spacing:2px;
+    text-decoration: none;
+}
+.meun > li a:hover{
+    background: #583E7E;
+    color: #f7f7f7;
+    padding-left: 30%;
+    text-decoration: none;
+    -moz-animation: colorChange 1s;	/* Firefox */
+    -webkit-animation: colorChange 1s;	/* Safari 和 Chrome */
+    -o-animation: colorChange 1s;	/* Opera */
+}
+.meun > li .active{
+    background: #59925C;
+    color: #f7f7f7;
+    padding-left: 30%;
+    text-decoration: none;
+}
+
+.meun-sub{                          /*二级菜单样式*/
+    background: #B1D8B1;
+    display: none;
+}
+.meun-sub > li a{
+    border: 0px;
+}
+.meun-sub > li .active-sub{
+    background: #0099CC;
+    color: #f7f7f7;
+    padding-left: 30%;
+    text-decoration: none;
+}
+
+.meun-level3{                      /*三级菜单样式*/
+    background: #97bcd8;
+    display: none;
+}
+.meun-level3 > li a{
+    border: 0px;
+}
+.meun-level3 > li .active-level3{
+    background: #583E7E;
+    color: #f7f7f7;
+    padding-left: 30%;
+    text-decoration: none;
+}
+@keyframes colorChange
+{
+    from {padding-left: 0%}
+    to {background: #583E7E;padding-left: 30%}
+
+}
+
+@-moz-keyframes colorChange /* Firefox */
+{
+    from {padding-left: 0%}
+    to {background: #583E7E;padding-left: 30%}
+}
+
+@-webkit-keyframes colorChange /* Safari 和 Chrome */
+{
+    from {padding-left: 0%}
+    to {background: #583E7E;padding-left: 30%}
+}
+
+@-o-keyframes colorChange /* Opera */
+{
+    from {padding-left: 0%}
+    to {background: #583E7E;padding-left: 30%}
+}
+
+.data-min{
+    width: 75%;
+    float: right;
+    padding-left: 5px;
+    padding-right: 0px;
+    -moz-animation: dataChangeToMin 1s;	/* Firefox */
+    -webkit-animation: dataChangeToMin 1s;	/* Safari 和 Chrome */
+    -o-animation: dataChangeToMin 1s;	/* Opera */
+}
+.meun-max{
+    width: 25%;
+    float: left;
+    padding-left: 5px;
+    padding-right: 0px;
+    -moz-animation: meunChangeToMax 1s;	/* Firefox */
+    -webkit-animation: meunChangeToMax 1s;	/* Safari 和 Chrome */
+    -o-animation: meunChangeToMax 1s;	/* Opera */
+}
+.data-max{
+    width: 100%;
+    float: right;
+    padding-left: 5px;
+    padding-right: 0px;
+    -moz-animation: dataChangeToMax 1s;	/* Firefox */
+    -webkit-animation: dataChangeToMax 1s;	/* Safari 和 Chrome */
+    -o-animation: dataChangeToMax 1s;	/* Opera */
+}
+.meun-min{
+    width: 0%;
+    float: left;
+    position:absolute;
+    left: -5px;
+    padding-left: 5px;
+    padding-right: 0px;
+    -moz-animation: meunChangeToMin 1s;	/* Firefox */
+    -webkit-animation: meunChangeToMin 1s;	/* Safari 和 Chrome */
+    -o-animation: meunChangeToMin 1s;	/* Opera */
+
+}
+
+@media (max-width:768px) {
+    .meun-max{
+        width: 50%;
+        -moz-animation: meunChangeToMax-moble 1s;	/* Firefox */
+        -webkit-animation: meunChangeToMax-moble 1s;	/* Safari 和 Chrome */
+        -o-animation: meunChangeToMax-moble 1s;	/* Opera */
+    }
+    .data-min{
+        width:50%;
+        -moz-animation: dataChangeToMin-moble 1s;	/* Firefox */
+        -webkit-animation: dataChangeToMin-moble 1s;	/* Safari 和 Chrome */
+        -o-animation: dataChangeToMin-moble 1s;	/* Opera */
+    }
+
+    .meun-min{
+        -moz-animation: meunChangeToMin-moble 1s;	/* Firefox */
+        -webkit-animation: meunChangeToMin-moble 1s;	/* Safari 和 Chrome */
+        -o-animation: meunChangeToMin-moble 1s;	/* Opera */
+    }
+    .data-max{
+        -moz-animation: dataChangeToMax-moble 1s;	/* Firefox */
+        -webkit-animation: dataChangeToMax-moble 1s;	/* Safari 和 Chrome */
+        -o-animation: dataChangeToMax-moble 1s;	/* Opera */
+    }
+}
+
+
+@keyframes meunChangeToMin      /*菜单栏转换到隐藏式的动画*/
+{
+    from {width:25%}
+    to {width:0%}
+
+}
+
+@-moz-keyframes meunChangeToMin /* Firefox */
+{
+    from {width:25%}
+    to {width:0%}
+}
+
+@-webkit-keyframes meunChangeToMin /* Safari 和 Chrome */
+{
+    from {width:25%}
+    to {width:0%}
+}
+
+@-o-keyframes meunChangeToMin /* Opera */
+{
+    from {width:25%}
+    to {width:0%}
+}
+
+@keyframes meunChangeToMax      /*菜单栏转换到显示式的动画*/
+{
+    from {width:0%}
+    to {width:25%}
+
+}
+
+@-moz-keyframes meunChangeToMax /* Firefox */
+{
+    from {width:0%}
+    to {width:25%}
+}
+
+@-webkit-keyframes meunChangeToMax /* Safari 和 Chrome */
+{
+    from {width:0%}
+    to {width:25%}
+}
+
+@-o-keyframes meunChangeToMax /* Opera */
+{
+    from {width:0%}
+    to {width:25%}
+}
+
+
+
+@keyframes dataChangeToMin      /*数据栏转换到隐藏式的动画*/
+{
+    from {width:100%}
+    to {width:75%}
+
+}
+
+@-moz-keyframes dataChangeToMin /* Firefox */
+{
+    from {width:100%}
+    to {width:75%}
+}
+
+@-webkit-keyframes dataChangeToMin /* Safari 和 Chrome */
+{
+    from {width:100%}
+    to {width:75%}
+}
+
+@-o-keyframes dataChangeToMin /* Opera */
+{
+    from {width:100%}
+    to {width:75%}
+}
+
+@keyframes dataChangeToMax      /*数据栏转换到显示式的动画*/
+{
+    from {width:75%}
+    to {width:100%}
+
+}
+
+@-moz-keyframes dataChangeToMax /* Firefox */
+{
+    from {width:75%}
+    to {width:100%}
+}
+
+@-webkit-keyframes dataChangeToMax /* Safari 和 Chrome */
+{
+    from {width:75%}
+    to {width:100%}
+}
+
+@-o-keyframes dataChangeToMax /* Opera */
+{
+    from {width:75%}
+    to {width:100%}
+}
+
+
+
+
+/*适应手机端的动画效果*/
+@keyframes meunChangeToMax-moble      /*菜单栏转换到显示式的动画*/
+{
+    from {width:0%}
+    to {width:50%}
+
+}
+
+@-moz-keyframes meunChangeToMax-moble /* Firefox */
+{
+    from {width:0%}
+    to {width:50%}
+}
+
+@-webkit-keyframes meunChangeToMax-moble /* Safari 和 Chrome */
+{
+    from {width:0%}
+    to {width:50%}
+}
+
+@-o-keyframes meunChangeToMax-moble /* Opera */
+{
+    from {width:0%}
+    to {width:50%}
+}
+
+
+
+@keyframes dataChangeToMin-moble      /*数据栏转换到隐藏式的动画*/
+{
+    from {width:100%}
+    to {width:50%}
+
+}
+
+@-moz-keyframes dataChangeToMin-moble /* Firefox */
+{
+    from {width:100%}
+    to {width:50%}
+}
+
+@-webkit-keyframes dataChangeToMin-moble /* Safari 和 Chrome */
+{
+    from {width:100%}
+    to {width:50%}
+}
+
+@-o-keyframes dataChangeToMin-moble /* Opera */
+{
+    from {width:100%}
+    to {width:50%}
+}
+
+@keyframes meunChangeToMin-moble      /*菜单栏转换到隐藏式的动画*/
+{
+    from {width:50%}
+    to {width:0%}
+
+}
+
+@-moz-keyframes meunChangeToMin-moble /* Firefox */
+{
+    from {width:50%}
+    to {width:0%}
+}
+
+@-webkit-keyframes meunChangeToMin-moble /* Safari 和 Chrome */
+{
+    from {width:50%}
+    to {width:0%}
+}
+@-o-keyframes meunChangeToMin-moble /* Opera */
+{
+    from {width:50%}
+    to {width:0%}
+}
+
+@keyframes dataChangeToMax-moble      /*数据栏转换到显示式的动画*/
+{
+    from {width:50%}
+    to {width:100%}
+
+}
+
+@-moz-keyframes dataChangeToMax-moble /* Firefox */
+{
+    from {width:50%}
+    to {width:100%}
+}
+
+@-webkit-keyframes dataChangeToMax-moble /* Safari 和 Chrome */
+{
+    from {width:50%}
+    to {width:100%}
+}
+
+@-o-keyframes dataChangeToMax-moble /* Opera */
+{
+    from {width:50%}
+    to {width:100%}
+}
+
+/**
+   <---  /中部内容区域         -->
+ */
+/**
+   <---  底部区域         -->
+ */
+.bs-docs-footer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 100px;
+    color: #99979c;
+    text-align: center;
+    background-color: #2a2730;
+}
+
+.bs-docs-footer-links {
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+.bs-docs-footer-links li {
+    display: inline-block;
+}
+
+.bs-docs-footer-links li + li {
+    margin-left: 15px;
+}
+
+.bs-docs-footer a {
+    color: #fff;
+}
+
+@media (min-width: 768px) {
+    .bs-docs-footer {
+        text-align: left;
+    }
+
+    .bs-docs-footer p {
+        margin-bottom: 0;
+    }
+}
+
+/**
+   <---  /底部区域         -->
+ */
+
+/**
+   媒体查询
+ */
+
+@media screen and (max-width: 500px) {
+    /*屏幕小于500pxs时*/
+    #logo-TongRen {
+        position: absolute;
+        width: 40%;
+        top: 30px;
+        right: 30px;
+    }
+
+    #Title-h3 {
+        width: 1em;
+        top: 100px;
+        left: 5px;
+        color: #fff;
+    }
+
+    #Title-h1 {
+        width: 1em;
+        top: 1em;
+        left: 1em;
+        color: #fff;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    /*屏幕大于1280pxs时*/
+    .center-img {
+        width: 100%;
+        margin: 0;
+    }
+}
