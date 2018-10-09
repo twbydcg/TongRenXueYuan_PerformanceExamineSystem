@@ -1,0 +1,8 @@
+package cn.trxy.servce;
+
+/**
+ * ”√ªßDAO¿‡
+ * */
+public class UserService {
+	
+}

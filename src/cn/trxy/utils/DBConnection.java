@@ -2,10 +2,12 @@ package cn.trxy.utils;
 
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.util.Properties;
 import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Properties;
 
 public class DBConnection {
 	
@@ -64,5 +66,23 @@ public class DBConnection {
 		}
 		return connection;
 	} 
+	
+	//关闭相关数据对象
+	public static void close(Statement statement ,ResultSet resultSet ) {
+		if(statement!=null) {
+			try {
+				statement.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		if(resultSet!=null) {
+			try {
+				resultSet.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	}
 
 }

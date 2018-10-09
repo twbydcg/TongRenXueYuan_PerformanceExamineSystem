@@ -31,6 +31,8 @@ public class AcademyDao {
 			academyBean.setAcademyname(resultSet.getString(2));
 		} catch (SQLException e) {
 			e.printStackTrace();
+		}finally {
+			DBConnection.close(statement, resultSet);
 		}
 		return academyBean;
 	}
@@ -56,6 +58,8 @@ public class AcademyDao {
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
+		}finally {
+			DBConnection.close(statement, resultSet);
 		}
 		
 		return list;
