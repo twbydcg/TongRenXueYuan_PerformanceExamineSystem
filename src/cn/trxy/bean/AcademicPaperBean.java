@@ -6,12 +6,12 @@ import com.opensymphony.xwork2.ActionSupport;
  * 论文类成果--学术类论文JavaBean
  * */
 public class AcademicPaperBean extends ActionSupport {
-	
-	
+
 	private static final long serialVersionUID = 1L;
 	private Integer id;
 	private String papertype;
 	private String papertitle;
+	private String yearlimit;
 	private String firstauthor;
 	private String messageauthor;
 	private String ofdeptment;
@@ -27,17 +27,11 @@ public class AcademicPaperBean extends ActionSupport {
 	private String firstproject;
 	private String score;
 	private String authorgrade;
-	private String academyid;
+	private int academyid;
 	private String ofauthor;
 	private String yourfile;
-	public String getYourfile() {
-		return yourfile;
-	}
-	public void setYourfile(String yourfile) {
-		this.yourfile = yourfile;
-	}
 	private String statuss;
-	private String commment;
+	private String comment;
 	public Integer getId() {
 		return id;
 	}
@@ -55,6 +49,12 @@ public class AcademicPaperBean extends ActionSupport {
 	}
 	public void setPapertitle(String papertitle) {
 		this.papertitle = papertitle;
+	}
+	public String getYearlimit() {
+		return yearlimit;
+	}
+	public void setYearlimit(String yearlimit) {
+		this.yearlimit = yearlimit;
 	}
 	public String getFirstauthor() {
 		return firstauthor;
@@ -146,10 +146,10 @@ public class AcademicPaperBean extends ActionSupport {
 	public void setAuthorgrade(String authorgrade) {
 		this.authorgrade = authorgrade;
 	}
-	public String getAcademyid() {
+	public int getAcademyid() {
 		return academyid;
 	}
-	public void setAcademyid(String academyid) {
+	public void setAcademyid(int academyid) {
 		this.academyid = academyid;
 	}
 	public String getOfauthor() {
@@ -158,18 +158,34 @@ public class AcademicPaperBean extends ActionSupport {
 	public void setOfauthor(String ofauthor) {
 		this.ofauthor = ofauthor;
 	}
+	public String getYourfile() {
+		return yourfile;
+	}
+	public void setYourfile(String yourfile) {
+		this.yourfile = yourfile;
+	}
 	public String getStatuss() {
 		return statuss;
 	}
 	public void setStatuss(String statuss) {
 		this.statuss = statuss;
 	}
-	public String getCommment() {
-		return commment;
+	public String getComment() {
+		return comment;
 	}
-	public void setCommment(String commment) {
-		this.commment = commment;
+	public void setComment(String comment) {
+		this.comment = comment;
 	}
-	
+	@Override
+	public String toString() {
+		return "AcademicPaperBean [id=" + id + ", papertype=" + papertype + ", papertitle=" + papertitle
+				+ ", yearlimit=" + yearlimit + ", firstauthor=" + firstauthor + ", messageauthor=" + messageauthor
+				+ ", ofdeptment=" + ofdeptment + ", publishdate=" + publishdate + ", projectsource=" + projectsource
+				+ ", number=" + number + ", schoolsign=" + schoolsign + ", ISSNnumber=" + ISSNnumber + ", cnNumber="
+				+ cnNumber + ", category=" + category + ", categorysecond=" + categorysecond + ", layout=" + layout
+				+ ", firstproject=" + firstproject + ", score=" + score + ", authorgrade=" + authorgrade
+				+ ", academyid=" + academyid + ", ofauthor=" + ofauthor + ", yourfile=" + yourfile + ", statuss="
+				+ statuss + ", comment=" + comment + "]";
+	}
 	
 }

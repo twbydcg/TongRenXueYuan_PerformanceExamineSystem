@@ -217,11 +217,11 @@ public class AcademicPaperController extends HttpServlet {
 	
 	public String paperRegiter(){
 		//学校署名
-		String schoolSign = this.getSchoolsign();
+		//String schoolSign = this.getSchoolsign();
 		//刊物类型中的具体某一个类或者区......
-		String  categorySecond = this.getCategorysecond();
+		//String  categorySecond = this.getCategorysecond();
 		//作者等级
-		String  authorGrade = this.getAuthorgrade();
+		//String  authorGrade = this.getAuthorgrade();
 		
 		return "index";
 	}
