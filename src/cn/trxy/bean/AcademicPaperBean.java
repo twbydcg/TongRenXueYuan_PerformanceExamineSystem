@@ -1,9 +1,14 @@
 package cn.trxy.bean;
+
+import com.opensymphony.xwork2.ActionSupport;
+
 /*
  * 论文类成果--学术类论文JavaBean
  * */
-public class AcademicPaperBean {
+public class AcademicPaperBean extends ActionSupport {
 	
+	
+	private static final long serialVersionUID = 1L;
 	private Integer id;
 	private String papertype;
 	private String papertitle;

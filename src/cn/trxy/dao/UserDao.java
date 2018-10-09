@@ -7,7 +7,6 @@ import java.sql.SQLException;
 
 import cn.trxy.bean.UserBean;
 import cn.trxy.utils.DBConnection;
-import cn.trxy.utils.Sha1;
 
 /**
  * 用户service类
@@ -27,19 +26,16 @@ public class UserDao {
 	 * @param password 密码
 	 * @return 验证成功返回用户对象 否在返回null
 	 * */
-	public  UserBean login(String username,String password) {
+	public  UserBean login(String account,String password) {
 		///返回的用户
 		UserBean userBean=null;
 		connection=DBConnection.getConnection();
-		//调用加密类对密码加密验证
-		String secuityPassword=Sha1.getSha1(password);
 		try {
 			//组织SQL语句
-			String sql="select * from trxypes_user where username=? and password=?";
+			String sql="select * from trxypes_user where account=? and password=?";
 			statement=connection.prepareStatement(sql);
-		
-			statement.setString(1, username);
-			statement.setString(2, secuityPassword);
+			statement.setString(1, account);
+			statement.setString(2, password);
 			resultSet=statement.executeQuery();
 			if(resultSet!=null) {
 				while(resultSet.next()) {
@@ -115,4 +111,5 @@ public class UserDao {
 			return userBean;
 		}
 	}
+	
 }

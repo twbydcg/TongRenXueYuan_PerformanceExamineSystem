@@ -77,7 +77,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <div class="login-line hidden-xs"></div>
         <div class="login-right col-sm-6">
             <div class="login-right-head"></div>
-            <form class="form-horizontal form-signin" action="/checkLogin.action" method="post">
+            <form class="form-horizontal form-signin" action="checkLogin.action" method="post">
                 <!-- 身份选择-->
                 <div class="form-group">
                     <label for="useride" class="col-sm-3 control-label">用户身份</label>
@@ -108,7 +108,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <!-- 验证码-->
                     <label for="userPassword" class="col-sm-3 control-label">验证码</label>
                     <div class="col-sm-6">
-                        <input class="form-control" type="text" title="请输入验证码" required placeholder="输入验证码">
+                        <input name="secruityCode" class="form-control" type="text" title="请输入验证码" required placeholder="输入验证码">
                     </div>
                     
                     <div class="col-sm-3">

@@ -93,6 +93,12 @@ public class UserBean {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
+	@Override
+	public String toString() {
+		return "UserBean [id=" + id + ", account=" + account + ", username=" + username + ", password=" + password
+				+ ", age=" + age + ", sex=" + sex + ", birthday=" + birthday + ", job=" + job + ", direction="
+				+ direction + ", phone=" + phone + ", academyid=" + academyid + ", back=" + back + "]";
+	}
 	
 	
 	
