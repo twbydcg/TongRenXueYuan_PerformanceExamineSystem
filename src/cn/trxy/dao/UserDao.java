@@ -41,20 +41,22 @@ public class UserDao {
 			statement.setString(1, username);
 			statement.setString(2, secuityPassword);
 			resultSet=statement.executeQuery();
-			while(resultSet.next()) {
-				userBean=new UserBean();
-				userBean.setId(resultSet.getInt(1));
-				userBean.setAccount(resultSet.getString(2));
-				userBean.setUsername(resultSet.getString(3));
-				userBean.setPassword(resultSet.getString(4));
-				userBean.setAge(resultSet.getInt(5));
-				userBean.setSex(resultSet.getInt(6));
-				userBean.setBirthday(resultSet.getDate(7));
-				userBean.setJob(resultSet.getInt(8));
-				userBean.setPhone(resultSet.getString(9));
-				userBean.setDirection(resultSet.getString(10));
-				userBean.setAcademyid(resultSet.getInt(11));
-				userBean.setBack(resultSet.getString(12));
+			if(resultSet!=null) {
+				while(resultSet.next()) {
+					userBean=new UserBean();
+					userBean.setId(resultSet.getInt(1));
+					userBean.setAccount(resultSet.getString(2));
+					userBean.setUsername(resultSet.getString(3));
+					userBean.setPassword(resultSet.getString(4));
+					userBean.setAge(resultSet.getInt(5));
+					userBean.setSex(resultSet.getInt(6));
+					userBean.setBirthday(resultSet.getDate(7));
+					userBean.setJob(resultSet.getInt(8));
+					userBean.setPhone(resultSet.getString(9));
+					userBean.setDirection(resultSet.getString(10));
+					userBean.setAcademyid(resultSet.getInt(11));
+					userBean.setBack(resultSet.getString(12));
+				}
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -85,20 +87,22 @@ public class UserDao {
 			statement=connection.prepareStatement(sql);
 			statement.setInt(1, id);
 			resultSet=statement.executeQuery();
-			while(resultSet.next()) {
-				userBean=new UserBean();
-				userBean.setId(resultSet.getInt(1));
-				userBean.setAccount(resultSet.getString(2));
-				userBean.setUsername(resultSet.getString(3));
-				userBean.setPassword(resultSet.getString(4));
-				userBean.setAge(resultSet.getInt(5));
-				userBean.setSex(resultSet.getInt(6));
-				userBean.setBirthday(resultSet.getDate(7));
-				userBean.setJob(resultSet.getInt(8));
-				userBean.setPhone(resultSet.getString(9));
-				userBean.setDirection(resultSet.getString(10));
-				userBean.setAcademyid(resultSet.getInt(11));
-				userBean.setBack(resultSet.getString(12));
+			if(resultSet!=null) {
+				while(resultSet.next()) {
+					userBean=new UserBean();
+					userBean.setId(resultSet.getInt(1));
+					userBean.setAccount(resultSet.getString(2));
+					userBean.setUsername(resultSet.getString(3));
+					userBean.setPassword(resultSet.getString(4));
+					userBean.setAge(resultSet.getInt(5));
+					userBean.setSex(resultSet.getInt(6));
+					userBean.setBirthday(resultSet.getDate(7));
+					userBean.setJob(resultSet.getInt(8));
+					userBean.setPhone(resultSet.getString(9));
+					userBean.setDirection(resultSet.getString(10));
+					userBean.setAcademyid(resultSet.getInt(11));
+					userBean.setBack(resultSet.getString(12));
+				}
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

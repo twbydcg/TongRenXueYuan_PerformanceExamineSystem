@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
 <struts>
-	<package name="academicPaper" namespace="/paper" extends="struts-default">
+	<package name="academicPaper" namespace="/" extends="struts-default">
+		<!-- 论文类成果学术类论文 -->
 		<action name="paperRegiter" class="cn.trxy.controller.AcademicPaperController" method="paperRegiter">
 			<result name="index">/WEB-INF/back/index.jsp</result>
+		</action>
+		<!-- 用户作者 -->
+		<action name="checkLogin" class="cn.trxy.controller.UserController" method="checkLogin">
+			<result name="home/index">/WEB-INF/index.html</result><!--验证成功页面  -->
+			<result name="login">/login.jsp</result> <!--验证失败页面 返回  -->
 		</action>
 	</package>
 </struts>    

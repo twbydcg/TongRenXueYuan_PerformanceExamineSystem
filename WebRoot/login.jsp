@@ -77,7 +77,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <div class="login-line hidden-xs"></div>
         <div class="login-right col-sm-6">
             <div class="login-right-head"></div>
-            <form class="form-horizontal form-signin" action="#">
+            <form class="form-horizontal form-signin" action="/checkLogin.action" method="post">
                 <!-- 身份选择-->
                 <div class="form-group">
                     <label for="useride" class="col-sm-3 control-label">用户身份</label>
