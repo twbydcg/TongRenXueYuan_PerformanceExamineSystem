@@ -31,8 +31,8 @@ public class DBConnection {
 		
 		// Properties properties=new Properties();
 			try {
-				//= DBConnection.class.getClassLoader().getResourceAsStream("config/db.properties");
-				//properties.load(fileInputStream);
+//				DBConnection.class.getClassLoader().getResourceAsStream("config/db.properties");
+//				properties.load(fileInputStream);
 //				this.user=properties.getProperty("jdbc.user");
 //				this.password=properties.getProperty("jdbc.password");
 //				this.driverClass=properties.getProperty("jdbc.driverClass");

@@ -25,7 +25,7 @@ public class UserController extends ActionSupport {
 		
 		//对工号和密码进行一般的检测
 		if(getAccount()=="" || getPassword()=="") {
-			return "home/index";
+			return "login";
 		}else {
 			//传入工号和密码进行验证
 			UserService userService=new UserService();
@@ -33,6 +33,8 @@ public class UserController extends ActionSupport {
 			if(userBean==null) {
 				return "login";
 			}else {
+				//将用户存入session中
+				request.getSession().setAttribute("userInfo", userBean);
 				return "home/index";
 			}
 		}
