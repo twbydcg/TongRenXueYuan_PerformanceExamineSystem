@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-import cn.trxy.bean.SignunitBean;
+import cn.trxy.bean.AhthorunitBean;
 import cn.trxy.inter.BaseInter;
 import cn.trxy.utils.DBConnection;
 
@@ -26,7 +26,7 @@ public class AhthorunitDao implements BaseInter {
 		@Override
 		public <T> List<T> getAll() {
 			connection=DBConnection.getConnection();
-			List<SignunitBean> list=new ArrayList<SignunitBean>();
+			List<AhthorunitBean> list=new ArrayList<AhthorunitBean>();
 			//×éÖ¯SQLÓï¾ä
 			String sql="select * from trxypes_ahthorunit";
 			try {
@@ -34,7 +34,7 @@ public class AhthorunitDao implements BaseInter {
 				resultSet=statement.executeQuery();
 				if(resultSet!=null) {
 					while(resultSet.next()) {
-						SignunitBean tem=new SignunitBean();
+						AhthorunitBean tem=new AhthorunitBean();
 						tem.setId(resultSet.getInt(1));
 						tem.setName(resultSet.getString(2));
 						list.add(tem);
