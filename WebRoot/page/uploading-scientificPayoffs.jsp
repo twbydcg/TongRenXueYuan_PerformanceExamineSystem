@@ -3,6 +3,8 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c"%>
+
 <!DOCTYPE html>
 <html lang="zh">
 <head>
@@ -27,12 +29,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <div class="col-sm-4">
 	        	<select class="form-control" id="subject"  name="papertype" >
 	                <option value="0" selected="selected">--请选择--</option>
+	                <c:forEach items="${papertype}" var="p">
+	                	<option value="${p.name}">${p.name}</option>
+	                </c:forEach>
 	            </select>
         </div>
          <label for="projectSource" class="col-sm-2 control-label">项目来源</label>
        <div class="col-sm-3">
              <select class="form-control" id="type" name="projectsource">
                 <option value="0" selected="selected">--请选择--</option>
+                <c:forEach items="${projectsource}" var="p">
+                	<option value="${p.name}">${p.name}</option>
+                </c:forEach>
             </select>
         </div>
     </div>
@@ -46,6 +54,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <div class="col-sm-3">
             <select class="form-control" id="type" name="schoolsign">
                 <option value="0" selected="selected">--请选择--</option>
+                <c:forEach items="${signunit}" var="s">
+                	<option value="${s.name}">${s.name}</option>
+                </c:forEach>
             </select>
         </div>
     </div>
@@ -77,27 +88,25 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         </div>
         <label for="ISSN" class="col-sm-2 control-label">ISSN号</label>
         <div class="col-sm-3">
-        	<input type="text" class="form-control" id="correspondingAuthor" required placeholder="期号" name="ISSNnumber">
+        	<input type="text" class="form-control" id="correspondingAuthor" required placeholder="ISSN号" name="ISSNnumber">
         </div>
     </div>
     
    <div class="form-group">
         <label for="sign" class="col-sm-2 control-label">第一作者</label>
         <div class="col-sm-4">
-             <input type="text" class="form-control" id="correspondingAuthor" required placeholder="期号" name="firstauthor"> 
+             <input type="text" class="form-control" id="correspondingAuthor" required placeholder="第一作者" name="firstauthor"> 
         </div>
         <label for="sign" class="col-sm-2 control-label">CN号</label>
         <div class="col-sm-3">
-             <input type="text" class="form-control" id="correspondingAuthor" required placeholder="期号" name="cnNumber"> 
+             <input type="text" class="form-control" id="correspondingAuthor" required placeholder="CN号" name="cnNumber"> 
         </div>
     </div>
     
     <div class="form-group">
         <label for="sign" class="col-sm-2 control-label">通讯作者</label>
         <div class="col-sm-4">
-             <select class="form-control" id="type" name="messageauthor">
-                <option value="0" selected="selected">--请选择--</option>
-            </select>
+         <input type="text" class="form-control" id="correspondingAuthor" required placeholder="通讯作者" name="messageauthor"> 
         </div>
         <label for="sign" class="col-sm-2 control-label">版面</label>
         <div class="col-sm-3">

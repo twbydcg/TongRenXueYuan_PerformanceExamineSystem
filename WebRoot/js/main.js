@@ -71,7 +71,7 @@ function level3cheked(a,level3Index) {
 
     var iframe=$("#myrame");
     switch (level3Index) {
-        case 1:iframe.attr("src","page/uploading-scientificPayoffs.html");break;
+        case 1:iframe.attr("src","page/uploading-scientificPayoffs.jsp");break;
         case 2:break;
         case 3:break;
         case 4:break;

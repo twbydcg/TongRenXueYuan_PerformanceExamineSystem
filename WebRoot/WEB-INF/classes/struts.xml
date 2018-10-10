@@ -8,8 +8,8 @@
 		</action>
 		<!-- 用户作者 -->
 		<action name="checkLogin" class="cn.trxy.controller.UserController" method="checkLogin">
-			<result name="home/index">/WEB-INF/index.html</result><!--验证成功页面  -->
-			<result name="login">/index.jsp</result> <!--验证失败页面 返回  -->
+			<result name="home/index">/WEB-INF/index.jsp</result><!--验证成功页面  -->
+			<result name="login">/WEB-INF/login.jsp</result> <!--验证失败页面 返回  -->
 		</action>
 	</package>
 </struts>    

@@ -61,6 +61,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <li><a href="javascript:void(0)" onclick="cheked(this,4);">学科建设成果</a></li>
             <li><a href="javascript:void(0)" onclick="cheked(this,5);">(兼)行政管理业绩</a></li>
             <li><a href="javascript:void(0)" onclick="cheked(this,6);">其他业绩成果</a></li>
+            
             <li><a href="javascript:void(0)" onclick="cheked(this,7);">上传</a>
                 <ul class="meun-sub">
                     <li><a href="javascript:void(0)"  onclick="subcheked(this,11);" >科研成果</a>
@@ -83,6 +84,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     <li><a href="javascript:void(0)" onclick="subcheked(this,15);">其他业绩成果</a></li>
                 </ul>
             </li>
+            
             <li><a href="javascript:void(0)" onclick="cheked(this,8);">用户中心</a></li>
             <li><a href="javascript:void(0)" onclick="cheked(this,9);">退出</a></li>
         </ul>
