@@ -56,4 +56,10 @@ public class SignunitDao implements BaseInter {
 		return null;
 	}
 
+	@Override
+	public <T> List<T> getAllByObjectAndTableName(Object obj, String tableName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

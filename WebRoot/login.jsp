@@ -97,11 +97,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                                    required placeholder="职工号"  name="account">
                     </div>
 
-                <!-- 密码-->
+                <!-- 密码 <!-- required pattern="^[a-zA-Z]\w{5,17}$" -->
                     <label for="userPassword" class="col-sm-3 control-label">密码</label>
                     <div class="col-sm-9">
                          <input type="password" class="form-control" id="userPassword"  placeholder="Password" name="password"
-                                maxlength="10" required pattern="^[a-zA-Z]\w{5,17}$"
+                                maxlength="10" 
                                 title="字母开头，长度在6~18之间，只能包含字母、数字和下划线"  onkeyup="value=value.replace(/[^a-zA-Z0-9]/g,'')">
                     </div>
 

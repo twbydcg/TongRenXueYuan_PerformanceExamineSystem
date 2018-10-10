@@ -5,29 +5,39 @@ package cn.trxy.bean;
  * */
 public class AcademicPaperBean  {
 	private Integer id;
-	private String papertype;
-	private String papertitle;
-	private String yearlimit;
-	private String firstauthor;
-	private String messageauthor;
-	private String ofdeptment;
-	private String publishdate;
-	private String projectsource;
-	private String number;
-	private String schoolsign;
-	private String ISSNnumber;
-	private String cnNumber;
-	private String category;
-	private String categorysecond;
-	private String layout;
-	private String firstproject;
-	private String score;
-	private String authorgrade;
-	private int academyid;
-	private String ofauthor;
-	private String yourfile;
-	private String statuss;
-	private String comment;
+	private String papertype;//论文类型
+	private String papertitle;//论文题目
+	private String yearlimit;//论文年限
+	private String firstauthor;//第一作者
+	private String messageauthor;//通讯作者
+	private String publishdate;//出版时间
+	private String projectsource;//项目来源
+	private String number;//期号
+	private String schoolsign;//学校署名
+	private String ISSNnumber;//ISSN号
+	private String cnNumber;//CN号
+	private String category;//刊物类型
+	private String categorysecond;//刊物类型中的某类/某区。。
+	private String layout;//版面
+	private String firstproject;//学科门类
+	private String score;//积分
+	private String authorgrade;//作者等级
+	private int academyid;//所属学院
+	private String ofauthor;//所属作者
+	private String yourfile;//附件路径(附件下载)
+	private String statuss;//审核状态 0审核中 1已审核
+	private String comment;//备注
+	@Override
+	public String toString() {
+		return "AcademicPaperBean [id=" + id + ", papertype=" + papertype + ", papertitle=" + papertitle
+				+ ", yearlimit=" + yearlimit + ", firstauthor=" + firstauthor + ", messageauthor=" + messageauthor
+				+ ", publishdate=" + publishdate + ", projectsource=" + projectsource + ", number=" + number
+				+ ", schoolsign=" + schoolsign + ", ISSNnumber=" + ISSNnumber + ", cnNumber=" + cnNumber + ", category="
+				+ category + ", categorysecond=" + categorysecond + ", layout=" + layout + ", firstproject="
+				+ firstproject + ", score=" + score + ", authorgrade=" + authorgrade + ", academyid=" + academyid
+				+ ", ofauthor=" + ofauthor + ", yourfile=" + yourfile + ", statuss=" + statuss + ", comment=" + comment
+				+ "]";
+	}
 	public Integer getId() {
 		return id;
 	}
@@ -63,12 +73,6 @@ public class AcademicPaperBean  {
 	}
 	public void setMessageauthor(String messageauthor) {
 		this.messageauthor = messageauthor;
-	}
-	public String getOfdeptment() {
-		return ofdeptment;
-	}
-	public void setOfdeptment(String ofdeptment) {
-		this.ofdeptment = ofdeptment;
 	}
 	public String getPublishdate() {
 		return publishdate;
@@ -172,16 +176,8 @@ public class AcademicPaperBean  {
 	public void setComment(String comment) {
 		this.comment = comment;
 	}
-	@Override
-	public String toString() {
-		return "AcademicPaperBean [id=" + id + ", papertype=" + papertype + ", papertitle=" + papertitle
-				+ ", yearlimit=" + yearlimit + ", firstauthor=" + firstauthor + ", messageauthor=" + messageauthor
-				+ ", ofdeptment=" + ofdeptment + ", publishdate=" + publishdate + ", projectsource=" + projectsource
-				+ ", number=" + number + ", schoolsign=" + schoolsign + ", ISSNnumber=" + ISSNnumber + ", cnNumber="
-				+ cnNumber + ", category=" + category + ", categorysecond=" + categorysecond + ", layout=" + layout
-				+ ", firstproject=" + firstproject + ", score=" + score + ", authorgrade=" + authorgrade
-				+ ", academyid=" + academyid + ", ofauthor=" + ofauthor + ", yourfile=" + yourfile + ", statuss="
-				+ statuss + ", comment=" + comment + "]";
-	}
+	
+	
+	
 	
 }
