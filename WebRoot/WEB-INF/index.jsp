@@ -42,8 +42,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <div class="row">
     <div class="meun-max nvabar-left" id="meunView" style="background: #ccffcc;overflow-y: auto; height: 1000px;">
         <ul class="meun">
-            <li><a href="javascript:void(0)" class="active" onclick="cheked(this,1);">个人成果排行</a></li>
-            <li><a href="javascript:void(0)" onclick="cheked(this,2);">科研成果</a>
+            <li><a href="javascript:void(0)" class="active" onclick="cheked(this,1);"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span>&nbsp;&nbsp;个人成果排行</a></li>
+            <li><a href="javascript:void(0)" onclick="cheked(this,2);"><span class="iconfont" aria-hidden="true">&#xe607;</span>&nbsp;&nbsp;科研成果</a>
                 <ul class="meun-sub">
                     <li><a href="javascript:void(0)" onclick="subcheked(this,1);" >论文类成果</a></li>
                     <li><a href="javascript:void(0)" onclick="subcheked(this,2);">项目类成果</a></li>
@@ -57,12 +57,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     <li><a href="javascript:void(0)" onclick="subcheked(this,10);">教学任务积分量化</a></li>
                 </ul>
             </li>
-            <li><a href="javascript:void(0)" onclick="cheked(this,3);">社会服务成果</a></li>
-            <li><a href="javascript:void(0)" onclick="cheked(this,4);">学科建设成果</a></li>
-            <li><a href="javascript:void(0)" onclick="cheked(this,5);">(兼)行政管理业绩</a></li>
-            <li><a href="javascript:void(0)" onclick="cheked(this,6);">其他业绩成果</a></li>
+            <li><a href="javascript:void(0)" onclick="cheked(this,3);"><span class="iconfont" aria-hidden="true">&#xe658;</span>&nbsp;&nbsp;社会服务成果</a></li>
+            <li><a href="javascript:void(0)" onclick="cheked(this,4);"><span class="iconfont" aria-hidden="true">&#xe604;</span>&nbsp;&nbsp;学科建设成果</a></li>
+            <li><a href="javascript:void(0)" onclick="cheked(this,5);"><span class="iconfont" aria-hidden="true">&#xe60c;</span>&nbsp;&nbsp;(兼)行政管理业绩</a></li>
+            <li><a href="javascript:void(0)" onclick="cheked(this,6);"><span class="glyphicon glyphicon-option-horizontal" aria-hidden="true"></span>&nbsp;&nbsp;其他业绩成果</a></li>
             
-            <li><a href="javascript:void(0)" onclick="cheked(this,7);">上传</a>
+            <li><a href="javascript:void(0)" onclick="cheked(this,7);"><span class="glyphicon glyphicon-open" aria-hidden="true"></span>&nbsp;&nbsp;上传</a>
                 <ul class="meun-sub">
                     <li><a href="javascript:void(0)"  onclick="subcheked(this,11);" >科研成果</a>
                         <ul class="meun-level3">
@@ -85,8 +85,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 </ul>
             </li>
             
-            <li><a href="javascript:void(0)" onclick="cheked(this,8);">用户中心</a></li>
-            <li><a href="javascript:void(0)" onclick="cheked(this,9);">退出</a></li>
+            <li><a href="javascript:void(0)" onclick="cheked(this,8);"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;用户中心</a></li>
+            <li><a href="javascript:void(0)" onclick="cheked(this,9);"><span class="glyphicon glyphicon-off" aria-hidden="true"></span>&nbsp;&nbsp;退出</a></li>
         </ul>
     </div>
     <!-- /导航栏部分 -->
