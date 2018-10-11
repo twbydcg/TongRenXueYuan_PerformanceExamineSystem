@@ -29,5 +29,14 @@
     <servlet-name>SecurityCode</servlet-name>
     <url-pattern>/trxypes/SecurityCode</url-pattern>
   </servlet-mapping>
+  <!--学术论文刊物具体分类  -->
+  <servlet>
+  	<servlet-name>categoregrade</servlet-name>
+  	<servlet-class>cn.trxy.controller.CategoregradeController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>categoregrade</servlet-name>
+  	<url-pattern>/trxypes/getCategoregrade</url-pattern>
+  </servlet-mapping>
   
 </web-app>

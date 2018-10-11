@@ -40,8 +40,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>竟聘系统</title>
-	<link rel="stylesheet" href="../static/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="../css/page-style.css">
+	<link rel="stylesheet" href="<%=path%>/static/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="<%=path%>/css/page-style.css">
 </head>
 <body>
 
@@ -50,7 +50,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <div class="topbar"></div>
 <div style="width: 100%;padding: 20px">
 
-<form class="form-horizontal form-signin" action="#">
+<form class="form-horizontal form-signin" action="<%=path%>/paperRegiter.action" method="post">
     <div class="form-group">
         <label for="title" class="col-sm-2 control-label">论文类型</label>
         <div class="col-sm-4">
@@ -123,20 +123,21 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <div class="form-group">
         <label for="college" class="col-sm-2 control-label">刊物类型</label>
         <div class="col-sm-2">
-            <select class="form-control" id="college" name="category">
+            <select class="form-control" id="category" name="category"  onchange="change();">
                 <option value ="0">请选择</option>
                  <% 
 	                for(AcademicPapercategoryBean p:allAcademicPapercategory){
 	                %>
-	                <option value="<%=p.getCategoryname()%>"><%=p.getCategoryname() %></option>
+	                <option value="<%=p.getCategoryname()%>"  title="<%=p.getId()%>"><%=p.getCategoryname() %></option>
 	                <% 
 	                }
 	                %>
             </select>
         </div>
         <div class="col-sm-2">
-            <select class="form-control" id="college" name="categorysecond">
+            <select class="form-control" id="categorysecond" name="categorysecond">
                 <option value ="0">请选择</option>
+                
             </select>
         </div>
         <label for="ISSN" class="col-sm-2 control-label">ISSN号</label>
@@ -230,8 +231,42 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </div>
 
 
-<script src="../static/jQuery/jquery.min.js" ></script>
-<script src="../static/js/uploading-scientificPayoffs.js"></script>
+<script src="<%=path%>/static/jQuery/jquery.min.js" ></script>
+<script src="<%=path%>/static/js/uploading-scientificPayoffs.js"></script>
+<script type="text/javascript">
 
+function change(){
+	var category=document.getElementById("category");
+ 	var categorysecond=document.getElementById("categorysecond");
+ 	var index=category.selectedIndex;
+	 var xmlhttp;
+          if(window.XMLHttpRequest){
+                   //正常浏览器、 ie7+ 创建XMLHttpRequest
+                   xmlhttp=new XMLHttpRequest();
+          }else{
+                   //ie 567创建XMLHttpRequest
+                   xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+          }
+          
+          xmlhttp.onreadystatechange=function(){
+                   if(xmlhttp.readyState==4&&xmlhttp.status==200){
+                             var xmlData=xmlhttp.responseXML;
+                             //追加元素
+                             var objs=xmlData.getElementsByTagName("obj");
+                             var options="<option>请选择</option>";
+                             for(var i=0;i<objs.length;i++){
+                             	var name=objs[i].getElementsByTagName("name")[0].firstChild.nodeValue;
+                             	var id=objs[i].getElementsByTagName("id")[0].firstChild.nodeValue;
+                             	options+='<option value='+id+'>'+name+'</option>';
+                             }
+                             categorysecond.innerHTML=options;
+                   }
+          }
+         
+          //向服务器发送请求
+          xmlhttp.open("GET","/TongRenXueYuan_PerformanceExamineSystem/trxypes/getCategoregrade?index="+index,true);
+          xmlhttp.send();
+}
+</script>
 </body>
 </html>

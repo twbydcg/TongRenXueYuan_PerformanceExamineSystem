@@ -1,39 +1,89 @@
 package cn.trxy.controller;
 
-import java.io.IOException;
-
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+
+import org.apache.struts2.ServletActionContext;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+import cn.trxy.bean.UserBean;
 
 /*
  *  论文类成果--学术类论文控制器
  * */
-public class AcademicPaperController extends HttpServlet {
+public class AcademicPaperController extends ActionSupport {
 
+	public String paperRegiter(){
+		//算分字段
+		//作者等级
+		String authorgrade=getAuthorgrade();
+		//学校署名
+		String schoolsign=getSchoolsign();
+		
+		//获取用户信息
+		HttpServletRequest request = ServletActionContext.getRequest();
+		UserBean userInfo=(UserBean)request.getSession().getAttribute("userInfo");
+		
+		
+		return "home/index";
+	}
 	private static final long serialVersionUID = 1L;
 	private Integer id;
-	private String papertype;
-	private String papertitle;
-	private String firstauthor;
-	private String messageauthor;
-	private String ofdeptment;
-	private String publishdate;
-	private String projectsource;
-	private String number;
-	private String schoolsign;
-	private String ISSNnumber;
-	private String cnNumber;
-	private String category;
-	private String categorysecond;
-	private String layout;
-	private String firstproject;
-	private String score;
-	private String authorgrade;
-	private String academyid;
-	private String ofauthor;
-	private String yourfile; //附件
+	private String papertype;//论文类型
+	private String papertitle;//论文题目
+	private String yearlimit;//论文年限
+	private String firstauthor;//第一作者
+	private String messageauthor;//通讯作者
+	private String publishdate;//出版时间
+	private String projectsource;//项目来源
+	private String number;//期号
+	private String schoolsign;//学校署名
+	private String ISSNnumber;//ISSN号
+	private String cnNumber;//CN号
+	private String category;//刊物类型
+	private String categorysecond;//刊物类型中的某类/某区。。
+	private String layout;//版面
+	private String firstproject;//学科门类
+	private String score;//积分
+	private String authorgrade;//作者等级
+	private int academyid;//所属学院
+	private String ofauthor;//所属作者
+	private String yourfile;//附件路径(附件下载)
+	private String statuss;//审核状态 0审核中 1已审核
+	private String comment;//备注
+	
+
+	public int getAcademyid() {
+		return academyid;
+	}
+
+	public String getYearlimit() {
+		return yearlimit;
+	}
+
+	public void setYearlimit(String yearlimit) {
+		this.yearlimit = yearlimit;
+	}
+
+	public String getStatuss() {
+		return statuss;
+	}
+
+	public void setStatuss(String statuss) {
+		this.statuss = statuss;
+	}
+
+	public String getComment() {
+		return comment;
+	}
+
+	public void setComment(String comment) {
+		this.comment = comment;
+	}
+
+	public void setAcademyid(int academyid) {
+		this.academyid = academyid;
+	}
 
 	public Integer getId() {
 		return id;
@@ -73,14 +123,6 @@ public class AcademicPaperController extends HttpServlet {
 
 	public void setMessageauthor(String messageauthor) {
 		this.messageauthor = messageauthor;
-	}
-
-	public String getOfdeptment() {
-		return ofdeptment;
-	}
-
-	public void setOfdeptment(String ofdeptment) {
-		this.ofdeptment = ofdeptment;
 	}
 
 	public String getPublishdate() {
@@ -179,14 +221,6 @@ public class AcademicPaperController extends HttpServlet {
 		this.authorgrade = authorgrade;
 	}
 
-	public String getAcademyid() {
-		return academyid;
-	}
-
-	public void setAcademyid(String academyid) {
-		this.academyid = academyid;
-	}
-
 	public String getOfauthor() {
 		return ofauthor;
 	}
@@ -201,29 +235,6 @@ public class AcademicPaperController extends HttpServlet {
 
 	public void setYourfile(String yourfile) {
 		this.yourfile = yourfile;
-	}
-
-	//doPost方法
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
-			throws ServletException, IOException {
-		super.doPost(req, resp);
-	}
-	
-	//doGet方法
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
-			throws ServletException, IOException {
-		super.doGet(req, resp);
-	}
-	
-	public String paperRegiter(){
-		//学校署名
-		//String schoolSign = this.getSchoolsign();
-		//刊物类型中的具体某一个类或者区......
-		//String  categorySecond = this.getCategorysecond();
-		//作者等级
-		//String  authorGrade = this.getAuthorgrade();
-		
-		return "index";
 	}
 	
 }

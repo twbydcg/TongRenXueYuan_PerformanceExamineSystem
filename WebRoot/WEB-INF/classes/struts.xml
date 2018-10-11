@@ -4,7 +4,7 @@
 	<package name="academicPaper" namespace="/" extends="struts-default">
 		<!-- 论文类成果学术类论文 -->
 		<action name="paperRegiter" class="cn.trxy.controller.AcademicPaperController" method="paperRegiter">
-			<result name="index">/WEB-INF/back/index.jsp</result>
+			<result name="home/index">/page/uploading-scientificPayoffs.jsp</result>
 		</action>
 		<!-- 用户作者 -->
 		<action name="checkLogin" class="cn.trxy.controller.UserController" method="checkLogin">
