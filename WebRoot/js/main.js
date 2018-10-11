@@ -52,7 +52,7 @@ function subcheked(a,subIndex) {
         case 8:iframe.attr("src","page/null.html");break;
         case 9:iframe.attr("src","page/null.html");break;
         case 10:iframe.attr("src","page/null.html");break;
-        case 11:break;
+        case 11:iframe.attr("src","page/null.html");break;
         default:iframe.attr("src","page/null.html");break;
     }
 
@@ -72,16 +72,16 @@ function level3cheked(a,level3Index) {
     var iframe=$("#myrame");
     switch (level3Index) {
         case 1:iframe.attr("src","page/uploading-scientificPayoffs.jsp");break;
-        case 2:break;
-        case 3:break;
-        case 4:break;
-        case 5:break;
-        case 6:break;
-        case 7:break;
-        case 8:break;
-        case 9:break;
-        case 10:break;
-        default:break;
+        case 2:iframe.attr("src","page/uploading-onlineArticle.jsp");break;
+        case 3:iframe.attr("src","page/null.html");break;
+        case 4:iframe.attr("src","page/null.html");break;
+        case 5:iframe.attr("src","page/null.html");break;
+        case 6:iframe.attr("src","page/null.html");break;
+        case 7:iframe.attr("src","page/null.html");break;
+        case 8:iframe.attr("src","page/null.html");break;
+        case 9:iframe.attr("src","page/null.html");break;
+        case 10:iframe.attr("src","page/null.html");break;
+        default:iframe.attr("src","page/null.html");break;
     }
 
 }
