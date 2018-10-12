@@ -121,11 +121,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</div>
                 <!--  忘记密码按钮-->
 				<div class="form-group">
-                    <a href="#" class="col-sm-offset-3 col-xs-offset-1">忘记密码？</a>
-
+                    <a href="#" class="col-sm-offset-5 col-xs-offset-3">忘记密码？</a>
                 <!-- 登录按钮-->
                     <input class="btn btn-lg btn-primary col-sm-6 col-xs-12 col-sm-offset-3 " type="submit" value="登 录">
                 </div>
+                
             </form>
         </div>
         </div>

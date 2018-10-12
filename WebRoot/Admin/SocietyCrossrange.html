@@ -1,0 +1,394 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html">
+    <meta charset="UTF-8">
+    <meta name="Generator" content="">
+    <meta name="Author" content="TRboy">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <link rel="shortcut icon" type="image/x-icon" href=""/>
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/Common.css"/>
+    <link rel="stylesheet" type="text/css" href="css/Index.css"/>
+    <link rel="stylesheet" type="text/css" href="css/Secientific.css"/>
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+    <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="js/Nav.js"></script>
+    <script type="text/javascript" src="js/ShelWin.js"></script>
+</head>
+<body class="bg">
+<!--纵向项目页面-->
+<!--开始头部-->
+<header>
+    <!--开始系统logo-->
+    <div class="logo fl"></div>
+    <!--结束系统logo-->
+    <!--开始用户身份退出-->
+    <ul class="root_nav fr">
+        <li class="home fl">
+            <a href="#">
+                <i class="iconfont icon-xing"></i>
+                <span>首页</span>
+            </a>
+        </li>
+        <li class="user fl">
+            <a href="#">
+                <i class="iconfont icon-zhanghuguanli"></i>
+                <span>审核人员</span>
+            </a>
+        </li>
+        <li class="exit fl">
+            <a href="#">
+                <i class="iconfont icon-zhuxiaoguanji"></i>
+                <span>退出</span>
+            </a>
+        </li>
+    </ul>
+    <!--结束用户身份退出-->
+</header>
+<!--结束头部-->
+
+<!--开始侧边导航栏(有个jq或者js要计算哈)-->
+<aside class="fl">
+    <ul class="menu">
+        <li class="index">
+            <a href="index.html">
+                <i class="iconfont icon-xing"></i>
+                <span>起始页面</span>
+            </a>
+            <a class="hiddle_nav" title="收起">
+                <i class="iconfont icon-shouqi"></i>
+            </a>
+        </li>
+        <!--开始科研所有内容-->
+        <li class="scientific">
+            <a href="javascript:void(0)" class="first_nav title_big" >
+                <i class="iconfont icon-keyanguanli"></i>
+                <span>科研成果</span>
+                <i class="iconfont icon-xiala-tianchong-copy init iconRotate" title="打开"></i>
+                <div class="line"></div>
+            </a>
+            <ul class="first_Drop aside_nav1">
+                <!--开始下拉菜单科研论文-->
+                <li class="sc_type" >
+                    <i class="iconfont icon-1"></i>
+                    <a href="ScientificPapers.html" class="title_mid">科研论文</a>
+                </li>
+                <!--结束下拉菜单科研论文-->
+
+                <!--开始下拉菜单科研项目-->
+                <li class="sc_type">
+                    <i class="iconfont icon-2"></i>
+                    <a href="ScientificProject.html" class="title_mid">科研项目</a>
+                </li>
+                <!--结束下拉菜单科研项目-->
+
+                <!--开始下拉菜单平台详情(科研平台)-->
+                <li class="sc_type" >
+                    <i class="iconfont icon-3"></i>
+                    <a href="ScientificTerrace.html" class="title_mid">科研平台</a>
+                </li>
+                <!--结束下拉菜单教改项目-->
+
+                <!--开始下拉菜单纵向项目-->
+                <li class="sc_type" >
+                    <i class="iconfont icon-4"></i>
+                    <a href="ScientificEndwise.html" class="title_mid">纵向项目</a>
+                </li>
+                <!--结束下拉菜单纵向项目-->
+
+                <!--开始下拉菜著作成果-->
+                <li class="sc_type" >
+                    <i class="iconfont icon-5"></i>
+                    <a href="ScientificWork.html" class="title_mid">著作成果</a>
+                </li>
+                <!--结束下拉菜著作成果-->
+
+                <!--开始下拉菜专利成果-->
+                <li class="sc_type" >
+                    <i class="iconfont icon-61"></i>
+                    <a href="ScientificPatent.html" class="title_mid">专利成果</a>
+                </li>
+                <!--结束下拉菜专利成果-->
+
+                <!--开始网络文章成果-->
+                <li class="sc_type" >
+                    <i class="iconfont icon-7"></i>
+                    <a href="ScientificNetwork.html" class="title_mid">网络文章成果</a>
+                </li>
+                <!--结束网络文章成果-->
+
+                <!--开始下拉菜单文体艺术成果-->
+                <li class="sc_type" >
+                    <i class="iconfont icon-8"></i>
+                    <a href="ScientificStyArt.html" class="title_mid">文体艺术成果</a>
+                </li>
+                <!--结束下拉菜单文体艺术成果-->
+
+                <!--开始下拉菜科研成果奖-->
+                <li class="sc_type" >
+                    <i class="iconfont icon-9"></i>
+                    <a href="ScientificPrize.html" class="title_mid">科研成果奖</a>
+                </li>
+                <!--结束下拉菜科研成果奖-->
+            </ul>
+        </li>
+        <!--结束科研所有内容-->
+
+        <!--开始教学成果-->
+        <li class="scientific">
+            <a href="javascript:void(0)" class="first_nav title_big">
+                <i class="iconfont icon-jiaoxueguanli-copy"></i>
+                <span>教学成果</span>
+                <i class="iconfont icon-xiala-tianchong-copy"></i>
+                <div class="line"></div>
+            </a>
+            <ul class="first_Drop aside_nav1">
+                <!--开始下拉菜单教改论文-->
+                <li class="sc_type" >
+                    <i class="iconfont icon-1"></i>
+                    <a href="EducationalPapers.html" class="title_mid">教改论文</a>
+                </li>
+                <!--结束下拉菜单教改论文-->
+
+                <!--开始下拉菜单教改项目-->
+                <li class="sc_type">
+                    <i class="iconfont icon-2"></i>
+                    <a href="EducationalProject.html" class="title_mid">教改项目</a>
+                </li>
+                <!--结束下拉菜单教改项目-->
+
+                <!--开始下拉菜单教改平台-->
+                <li class="sc_type" >
+                    <i class="iconfont icon-3"></i>
+                    <a href="EducationalTerrace.html" class="title_mid">教改平台</a>
+                </li>
+                <!--结束下拉菜单教改平台-->
+
+                <!--开始下拉菜单纵向项目-->
+                <li class="sc_type" >
+                    <i class="iconfont icon-4"></i>
+                    <a href="EducationalEndwise.html" class="title_mid">纵向项目</a>
+                </li>
+                <!--结束下拉菜单纵向项目-->
+
+                <!--开始下拉菜著作成果-->
+                <li class="sc_type" >
+                    <i class="iconfont icon-5"></i>
+                    <a href="EducationalWork.html" class="title_mid">著作成果</a>
+                </li>
+                <!--结束下拉菜著作成果-->
+
+                <!--开始下拉菜专利成果-->
+                <li class="sc_type" >
+                    <i class="iconfont icon-61"></i>
+                    <a href="EducationalPatent.html" class="title_mid">专利成果</a>
+                </li>
+                <!--结束下拉菜专利成果-->
+
+                <!--开始网络文章成果-->
+                <li class="sc_type" >
+                    <i class="iconfont icon-7"></i>
+                    <a href="EducationalNetwork.html" class="title_mid">网络文章成果</a>
+                </li>
+                <!--结束网络文章成果-->
+
+                <!--开始下拉菜单文体艺术成果-->
+                <li class="sc_type" >
+                    <i class="iconfont icon-8"></i>
+                    <a href="EducationalStyArt.html" class="title_mid">文体艺术成果</a>
+                </li>
+                <!--结束下拉菜单文体艺术成果-->
+
+                <!--开始下拉菜科教改果奖-->
+                <li class="sc_type" >
+                    <i class="iconfont icon-9"></i>
+                    <a href="EducationalPrize.html" class="title_mid">教改成果奖</a>
+                </li>
+                <!--结束下拉菜科教改果奖-->
+            </ul>
+        </li>
+        <!--结束教学成果-->
+
+        <!--开始社会服务成果--->
+        <li class="scientific">
+            <a href="javascript:void(0)" class="first_nav title_big">
+                <i class="iconfont icon-shehuituanti"></i>
+                <span>社会服务成果</span>
+                <i class="iconfont icon-xiala-tianchong-copy"></i>
+                <div class="line"></div>
+            </a>
+
+            <ul class="first_Drop aside_nav1">
+                <!--开始横向项目-->
+                <li class="sc_type" >
+                    <i class="iconfont icon-1"></i>
+                    <a href="SocietyCrossrange.html" class="title_mid">横向项目</a>
+                </li>
+                <!--结束横向项目-->
+
+                <!--开始入驻企业-->
+                <li class="sc_type" >
+                    <i class="iconfont icon-2"></i>
+                    <a href="Societyenterprise.html" class="title_mid">入驻企业</a>
+                </li>
+                <!--结束入驻企业-->
+            </ul>
+        </li>
+        <!--结束社会服务成果--->
+
+        <!--开始学科建设成果-->
+        <li class="scientific">
+            <a href="javascript:void(0)" class="first_nav title_big">
+                <i class="iconfont icon-kemu"></i>
+                <span>学科建设成果</span>
+                <i class="iconfont icon-xiala-tianchong-copy"></i>
+                <div class="line"></div>
+            </a>
+            <ul class="first_Drop aside_nav1">
+                <li class="sc_type" >
+                    <i class="iconfont icon-1"></i>
+                    <a href="SubjectMeeting.html" class="title_mid">参加会议</a>
+                </li>
+                <li class="sc_type" >
+                    <i class="iconfont icon-2"></i>
+                    <a href="SubjectLectures.html" class="title_mid">学术讲座</a>
+                </li>
+            </ul>
+        </li>
+        <!--结束学科建设成果-->
+        <!--开始行政管理业绩-->
+        <li class="scientific">
+            <a href="javascript:void(0)" class="first_nav title_big">
+                <i class="iconfont icon-hangzhengguanli"></i>
+                <span>行政管理业绩</span>
+                <i class="iconfont icon-xiala-tianchong-copy"></i>
+                <div class="line"></div>
+            </a>
+            <ul class="first_Drop aside_nav1">
+                <li class="sc_type" >
+                    <i class="iconfont icon-1"></i>
+                    <a href="Administration_01.html" class="title_mid">特殊审核</a>
+                </li>
+                <li class="sc_type" >
+                    <i class="iconfont icon-2"></i>
+                    <a href="Administration_01.html" class="title_mid">特殊审核</a>
+                </li>
+            </ul>
+        </li>
+        <!--结束行政管理业绩-->
+
+        <!--开始其他-->
+        <li class="scientific">
+            <a href="javascript:void(0)" class="title_big">
+                <i class="iconfont icon-more"></i>
+                <span>其他</span>
+                <i class="iconfont icon-xiala-tianchong-copy"></i>
+                <div class="line"></div>
+            </a>
+        </li>
+        <!--结束其他-->
+
+    </ul>
+</aside>
+<!--结束侧边导航栏-->
+
+<!--开始科研论文-->
+<div class="content_rt fl">
+    <div class="r_position">
+        <i class="iconfont icon-weizhi"></i>
+        <span>你的位置: 首页 > 教改论文</span>
+    </div>
+    <div class="r_table">
+        <div class="t_title">
+            <i></i>
+            <p>教改论文</p>
+        </div>
+        <div class="t_label">
+            <ul>
+                <li>
+                    <a href="#"><!--以多页面形式来写-->
+                        <i class="iconfont icon-wangongyishenhe-copy"></i>
+                        <span>已审核(100)</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="iconfont icon-wangongweishenhe-copy"></i>
+                        <span>未审核(10)</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="iconfont icon-daochu"></i>
+                        <span>导出数据</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="t_search">
+            <input type="button" value="GO" class="s_btn">
+            <input type="text" class="s_text" />
+        </div>
+        <div class="clear"></div>
+        <div class="t_table_list">
+            <table class="t_tab">
+                <thead>
+                <tr>
+                    <th>所属单位</th>
+                    <th>成果所属年限</th>
+                    <th>论文题目</th>
+                    <th>第一作者</th>
+                    <th>署名单位次第</th>
+                    <th>发表/出版时间</th>
+                    <th>学科门类</th>
+                    <th>项目来源</th>
+                    <th>审核状态</th>
+                    <th class="t_action">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>铜仁学院</td>
+                    <td>2018/8/6</td>
+                    <td>关于区块链</td>
+                    <td>王春春</td>
+                    <td>铜仁学院大数据学院</td>
+                    <td>2018/5/2</td>
+                    <td>自然科学</td>
+                    <td>国家级</td>
+                    <td>未通过</td>
+                    <td>
+                        <div class="t_tools">
+                            <!--查看-->
+                            <a href="#" class="t_see" title="查看详细">
+                                <i class="iconfont icon-chakan"></i>
+                            </a>
+                            <!--通过-->
+                            <a href="#" class="t_edit" title="通过">
+                                <i class="iconfont icon-tongguo"></i>
+                            </a>
+                            <!--不通过-->
+                            <a href="#" class="t_save" title="不通过">
+                                <i class="iconfont icon-butongguo"></i>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--开始页数-->
+        <div class="pages">
+            <a>上一页</a>
+            <a>1</a>
+            <a>...</a>
+            <a>下一页</a>
+        </div>
+        <!--结束页数-->
+    </div>
+</div>
+<!--结束科研论文-->
+</body>
+</html>
