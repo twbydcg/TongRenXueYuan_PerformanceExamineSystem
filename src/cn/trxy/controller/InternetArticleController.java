@@ -303,9 +303,9 @@ public class InternetArticleController {
 						//所属学院和作者在数据库中属于外键，这里需要先通过Session取得所属学院和作者在数据库中的ID，然后再加进来
 			int flag = st.executeUpdate(sql);
 			if(flag>0){
-				
-			}else{
-				
+				return "true"; //查询成功
+			}else{	
+				return "false"; //查询失败
 			}
 			
 		}catch(Exception e){

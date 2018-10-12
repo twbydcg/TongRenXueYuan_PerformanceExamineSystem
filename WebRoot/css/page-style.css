@@ -4,3 +4,7 @@
 .view{
     padding: 20px
 }
+
+.warning{
+	border: 2px solid #e68686;
+}

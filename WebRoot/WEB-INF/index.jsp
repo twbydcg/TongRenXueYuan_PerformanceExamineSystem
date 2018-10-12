@@ -4,7 +4,7 @@ String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh" id="main-view" >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -46,15 +46,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <li><a href="javascript:void(0)" onclick="cheked(this,2);"><span class="iconfont" aria-hidden="true">&#xe607;</span>&nbsp;&nbsp;科研成果</a>
                 <ul class="meun-sub">
                     <li><a href="javascript:void(0)" onclick="subcheked(this,1);" >论文类成果</a></li>
-                    <li><a href="javascript:void(0)" onclick="subcheked(this,2);">项目类成果</a></li>
-                    <li><a href="javascript:void(0)" onclick="subcheked(this,3);">获奖类成果</a></li>
-                    <li><a href="javascript:void(0)" onclick="subcheked(this,4);">著作出版成果</a></li>
-                    <li><a href="javascript:void(0)" onclick="subcheked(this,5);">科技及文化创新成果</a></li>
-                    <li><a href="javascript:void(0)" onclick="subcheked(this,6);">荣誉类成果</a></li>
-                    <li><a href="javascript:void(0)" onclick="subcheked(this,7);">学术活动成果</a></li>
-                    <li><a href="javascript:void(0)" onclick="subcheked(this,8);">指导学术类成果</a></li>
-                    <li><a href="javascript:void(0)" onclick="subcheked(this,9);">服务社会类成果</a></li>
-                    <li><a href="javascript:void(0)" onclick="subcheked(this,10);">教学任务积分量化</a></li>
+                    <li><a href="javascript:void(0)" onclick="subcheked(this,2);" >网络文章成果</a></li>
+                    <li><a href="javascript:void(0)" onclick="subcheked(this,3);" >项目类成果</a></li>
+                    <li><a href="javascript:void(0)" onclick="subcheked(this,4);" >获奖类成果</a></li>
+                    <li><a href="javascript:void(0)" onclick="subcheked(this,5);" >著作出版成果</a></li>
+                    <li><a href="javascript:void(0)" onclick="subcheked(this,6);" >科技及文化创新成果</a></li>
+                    <li><a href="javascript:void(0)" onclick="subcheked(this,7);" >荣誉类成果</a></li>
+                    <li><a href="javascript:void(0)" onclick="subcheked(this,8);" >学术活动成果</a></li>
+                    <li><a href="javascript:void(0)" onclick="subcheked(this,9);" >指导学术类成果</a></li>
+                    <li><a href="javascript:void(0)" onclick="subcheked(this,10);" >服务社会类成果</a></li>
+                    <li><a href="javascript:void(0)" onclick="subcheked(this,11);" >教学任务积分量化</a></li>
                 </ul>
             </li>
             <li><a href="javascript:void(0)" onclick="cheked(this,3);"><span class="iconfont" aria-hidden="true">&#xe658;</span>&nbsp;&nbsp;社会服务成果</a></li>
@@ -67,15 +68,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     <li><a href="javascript:void(0)"  onclick="subcheked(this,11);" >科研成果</a>
                         <ul class="meun-level3">
                             <li><a href="javascript:void(0)" onclick="level3cheked(this,1);">论文类成果</a></li>
-                            <li><a href="javascript:void(0)" onclick="level3cheked(this,2);">项目类成果</a></li>
-                            <li><a href="javascript:void(0)" onclick="level3cheked(this,3);">获奖类成果</a></li>
-                            <li><a href="javascript:void(0)" onclick="level3cheked(this,4);">著作出版成果</a></li>
-                            <li><a href="javascript:void(0)" onclick="level3cheked(this,5);">科技及文化创新成果</a></li>
-                            <li><a href="javascript:void(0)" onclick="level3cheked(this,6);">荣誉类成果</a></li>
-                            <li><a href="javascript:void(0)" onclick="level3cheked(this,7);">学术活动成果</a></li>
-                            <li><a href="javascript:void(0)" onclick="level3cheked(this,8);">指导学术类成果</a></li>
-                            <li><a href="javascript:void(0)" onclick="level3cheked(this,9);">服务社会类成果</a></li>
-                            <li><a href="javascript:void(0)" onclick="level3cheked(this,10);">教学任务积分量化</a></li>
+                            <li><a href="javascript:void(0)" onclick="level3cheked(this,2);" >网络文章成果</a></li>
+                            <li><a href="javascript:void(0)" onclick="level3cheked(this,3);">项目类成果</a></li>
+                            <li><a href="javascript:void(0)" onclick="level3cheked(this,4);">获奖类成果</a></li>
+                            <li><a href="javascript:void(0)" onclick="level3cheked(this,5);">著作出版成果</a></li>
+                            <li><a href="javascript:void(0)" onclick="level3cheked(this,6);">科技及文化创新成果</a></li>
+                            <li><a href="javascript:void(0)" onclick="level3cheked(this,7);">荣誉类成果</a></li>
+                            <li><a href="javascript:void(0)" onclick="level3cheked(this,8);">学术活动成果</a></li>
+                            <li><a href="javascript:void(0)" onclick="level3cheked(this,9);">指导学术类成果</a></li>
+                            <li><a href="javascript:void(0)" onclick="level3cheked(this,10);">服务社会类成果</a></li>
+                            <li><a href="javascript:void(0)" onclick="level3cheked(this,11);">教学任务积分量化</a></li>
                         </ul>
                     </li>
                     <li><a href="javascript:void(0)" onclick="subcheked(this,12);">社会服务成果</a></li>

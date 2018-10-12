@@ -4,14 +4,14 @@ String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh" >
 <head>
     <meta charset="UTF-8">
     <title>入口</title>
   </head>
   <body>
    
-   <jsp:forward page="/WEB-INF/login.jsp"></jsp:forward>
+   <jsp:forward page="/WEB-INF/index.jsp"></jsp:forward>
    
    
   </body>
