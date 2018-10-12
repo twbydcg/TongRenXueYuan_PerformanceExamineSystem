@@ -6,7 +6,9 @@ import org.apache.struts2.ServletActionContext;
 
 import com.opensymphony.xwork2.ActionSupport;
 
+import cn.trxy.bean.AcademicPaperBean;
 import cn.trxy.bean.UserBean;
+import cn.trxy.servce.AcademicPaperService;
 
 /*
  *  论文类成果--学术类论文控制器
@@ -14,17 +16,75 @@ import cn.trxy.bean.UserBean;
 public class AcademicPaperController extends ActionSupport {
 
 	public String paperRegiter(){
-		//算分字段
-		//作者等级
-		String authorgrade=getAuthorgrade();
-		//学校署名
-		String schoolsign=getSchoolsign();
 		
 		//获取用户信息
 		HttpServletRequest request = ServletActionContext.getRequest();
 		UserBean userInfo=(UserBean)request.getSession().getAttribute("userInfo");
 		
+		//算分字段----------------------------------------------------------------start//
+		//刊物类型
+		String category=getCategory();
+		//作者等级
+		String authorgrade=getAuthorgrade();
+		//学校署名
+		String schoolsign=getSchoolsign();
+		//刊物类型具体类别
+		int categorysecond=Integer.parseInt(getCategorysecond());
+		//是否在职
+		int job=userInfo.getJob();
 		
+		AcademicPaperService academicPaperService=new AcademicPaperService();
+		if(authorgrade!=""&&schoolsign!=null&&category!=null) {
+			//计算所得分
+			int score=academicPaperService.calculateScore(category,schoolsign, authorgrade, categorysecond,job);
+			//设置给属性
+			setScore(score);
+		}
+		//算分字段----------------------------------------------------------------end//
+		AcademicPaperBean a=new AcademicPaperBean();
+		//(`id`, `papertype`, `papertitle`, `yearlimit`, `firstauthor`, `messageauthor`, `publishdate`, `projectsource`, `number`, `schoolsign`, 
+		//`ISSNnumber`, `cnNumber`, `category`, `categorysecond`, `layout`, `firstproject`, `score`, `authorgrade`, `academyid`, `ofauthor`, `yourfile`, `statuss`, `comment`)
+		
+		//学院
+		setAcademyid(userInfo.getAcademyid());
+		//所属作者
+		setOfauthor(userInfo.getId());
+		//文件路径
+		setYourfile(getYourfile());
+		//审核状态 默认0
+		setStatuss(0);
+
+		a.setId(null);
+		a.setPapertype(getPapertype());
+		a.setPapertitle(getPapertitle());
+		a.setYearlimit(getYearlimit());
+		a.setFirstauthor(getFirstauthor());
+		a.setMessageauthor(getMessageauthor());
+		a.setPublishdate(getPublishdate());
+		a.setProjectsource(getProjectsource());
+		a.setNumber(getNumber());
+		a.setSchoolsign(getSchoolsign());
+		a.setISSNnumber(getISSNnumber());
+		a.setCnNumber(getCnNumber());
+		a.setCategory(getCategory());
+		a.setCategorysecond(getCategorysecond());
+		a.setLayout(getLayout());
+		a.setScore(getScore());
+		a.setAuthorgrade(getAuthorgrade());
+		a.setAcademyid(getAcademyid());
+		a.setOfauthor(getOfauthor());
+		a.setYourfile(getYourfile());
+		a.setStatuss(getStatuss());
+		a.setComment(getComment());
+		a.setFirstproject(getFirstproject());
+		
+		//添加数据
+		Boolean res=academicPaperService.addData(a);
+		if(res) {
+			request.setAttribute("addSuccess", true);
+		}else {
+			request.setAttribute("addSuccess", false);
+		}
 		return "home/index";
 	}
 	private static final long serialVersionUID = 1L;
@@ -44,12 +104,12 @@ public class AcademicPaperController extends ActionSupport {
 	private String categorysecond;//刊物类型中的某类/某区。。
 	private String layout;//版面
 	private String firstproject;//学科门类
-	private String score;//积分
+	private int score;//积分
 	private String authorgrade;//作者等级
 	private int academyid;//所属学院
-	private String ofauthor;//所属作者
+	private int ofauthor;//所属作者
 	private String yourfile;//附件路径(附件下载)
-	private String statuss;//审核状态 0审核中 1已审核
+	private int statuss;//审核状态 0审核中 1已审核
 	private String comment;//备注
 	
 
@@ -65,11 +125,11 @@ public class AcademicPaperController extends ActionSupport {
 		this.yearlimit = yearlimit;
 	}
 
-	public String getStatuss() {
+	public int getStatuss() {
 		return statuss;
 	}
 
-	public void setStatuss(String statuss) {
+	public void setStatuss(int statuss) {
 		this.statuss = statuss;
 	}
 
@@ -205,11 +265,11 @@ public class AcademicPaperController extends ActionSupport {
 		this.firstproject = firstproject;
 	}
 
-	public String getScore() {
+	public int getScore() {
 		return score;
 	}
 
-	public void setScore(String score) {
+	public void setScore(int score) {
 		this.score = score;
 	}
 
@@ -221,11 +281,11 @@ public class AcademicPaperController extends ActionSupport {
 		this.authorgrade = authorgrade;
 	}
 
-	public String getOfauthor() {
+	public int getOfauthor() {
 		return ofauthor;
 	}
 
-	public void setOfauthor(String ofauthor) {
+	public void setOfauthor(int ofauthor) {
 		this.ofauthor = ofauthor;
 	}
 

@@ -42,7 +42,7 @@ function subcheked(a,subIndex) {
 
     var iframe=$("#myrame");
     switch (subIndex) {
-        case 1:iframe.attr("src","page/scientificPayoffs.html");break;
+        case 1:iframe.attr("src","page/scientificPayoffs.jsp");break;
         case 2:iframe.attr("src","page/null.html");break;
         case 3:iframe.attr("src","page/null.html");break;
         case 4:iframe.attr("src","page/null.html");break;

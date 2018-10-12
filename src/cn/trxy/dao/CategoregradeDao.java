@@ -3,6 +3,7 @@ package cn.trxy.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -57,6 +58,30 @@ public class CategoregradeDao {
 			return null;
 		}
 		
+	}
+	
+	/**
+	 * 根据id刊物具体类别
+	 * @return 传入id所对应的刊物具体类别
+	 * */
+	public CategoregradeBean getByIdCategoregrade(int id){
+		CategoregradeBean categoregradeBean=new CategoregradeBean();
+		String sql="select * from trxypes_categoregrade where id="+id;
+		connection= DBConnection.getConnection();
+		try {
+			statement=connection.prepareStatement(sql);
+			resultSet=statement.executeQuery(sql);
+			resultSet.next();
+			categoregradeBean.setId(resultSet.getInt(1));
+			categoregradeBean.setTypename(resultSet.getString(2));
+			categoregradeBean.setScore(resultSet.getInt(3));
+			categoregradeBean.setCategoryid(resultSet.getInt(4));
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			DBConnection.close(statement, resultSet);
+		}
+		return categoregradeBean;
 	}
 	
 }

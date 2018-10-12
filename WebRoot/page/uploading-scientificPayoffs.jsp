@@ -178,7 +178,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     </div>
     
     <div class="form-group">
-        <label for="sign" class="col-sm-2 control-label">作者等级</label>
+        <label for="sign" class="col-sm-2 control-label">本人等级</label>
         <div class="col-sm-4">
              <select class="form-control" id="type" name="authorgrade">
                 <option value="0" selected="selected">请选择</option>
