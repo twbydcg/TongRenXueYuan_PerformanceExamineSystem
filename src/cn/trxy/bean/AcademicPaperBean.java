@@ -20,12 +20,12 @@ public class AcademicPaperBean  {
 	private String categorysecond;//刊物类型中的某类/某区。。
 	private String layout;//版面
 	private String firstproject;//学科门类
-	private String score;//积分
+	private int score;//积分
 	private String authorgrade;//作者等级
 	private int academyid;//所属学院
-	private String ofauthor;//所属作者
+	private int ofauthor;//所属作者
 	private String yourfile;//附件路径(附件下载)
-	private String statuss;//审核状态 0审核中 1已审核
+	private int statuss;//审核状态 0审核中 1已审核
 	private String comment;//备注
 	@Override
 	public String toString() {
@@ -134,10 +134,10 @@ public class AcademicPaperBean  {
 	public void setFirstproject(String firstproject) {
 		this.firstproject = firstproject;
 	}
-	public String getScore() {
+	public int getScore() {
 		return score;
 	}
-	public void setScore(String score) {
+	public void setScore(int score) {
 		this.score = score;
 	}
 	public String getAuthorgrade() {
@@ -152,10 +152,10 @@ public class AcademicPaperBean  {
 	public void setAcademyid(int academyid) {
 		this.academyid = academyid;
 	}
-	public String getOfauthor() {
+	public int getOfauthor() {
 		return ofauthor;
 	}
-	public void setOfauthor(String ofauthor) {
+	public void setOfauthor(int ofauthor) {
 		this.ofauthor = ofauthor;
 	}
 	public String getYourfile() {
@@ -164,10 +164,10 @@ public class AcademicPaperBean  {
 	public void setYourfile(String yourfile) {
 		this.yourfile = yourfile;
 	}
-	public String getStatuss() {
+	public int getStatuss() {
 		return statuss;
 	}
-	public void setStatuss(String statuss) {
+	public void setStatuss(int statuss) {
 		this.statuss = statuss;
 	}
 	public String getComment() {

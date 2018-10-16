@@ -24,6 +24,7 @@ public class CategoregradeController extends HttpServlet {
 	}
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		System.out.println("--------------有人请求数据----------------");
 		resp.setCharacterEncoding("utf-8");
 		resp.setContentType("text/xml;charset=utf-8");
 		resp.setHeader("Cache-control", "no-cache");

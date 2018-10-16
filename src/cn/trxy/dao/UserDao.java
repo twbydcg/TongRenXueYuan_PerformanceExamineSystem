@@ -52,6 +52,8 @@ public class UserDao {
 					userBean.setDirection(resultSet.getString(10));
 					userBean.setAcademyid(resultSet.getInt(11));
 					userBean.setBack(resultSet.getString(12));
+					userBean.setOffice(resultSet.getString(13));
+					userBean.setRole(resultSet.getString(14));
 				}
 			}
 		} catch (SQLException e) {

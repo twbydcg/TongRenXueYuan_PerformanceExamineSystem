@@ -165,12 +165,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <label for="authorgrade" class="col-sm-2 control-label">作者等级</label>
         <div class="col-sm-4">
              <select class="form-control" id="authorgrade" name="authorgrade">
+<<<<<<< HEAD
                 <option value="0" selected="selected" style="display: none">请选择</option>
                 <option value="1" >第一作者</option>
                 <option value="2" >第二作者</option>
                 <option value="3" >通讯作者</option>
                 
                <%-- <% 
+=======
+                <option value="0" selected="selected" style="display: none">请选择</option>     
+               <% 
+>>>>>>> dc5cc0a8e3cfcebf47470422e25e08f6594f21a8
 	                for(AhthorunitBean p:ahthorunit){
 	                %>
 	                <option value="<%=p.getName()%>"><%=p.getName() %></option>

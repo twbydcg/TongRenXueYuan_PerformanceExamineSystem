@@ -19,8 +19,22 @@ public class UserBean {
 	private String phone;//电话号码
 	private int academyid ;//学院
 	private String back;//备注
+	private String office;//职称
+	private String role;//用户身份
 	
 	
+	public String getOffice() {
+		return office;
+	}
+	public void setOffice(String office) {
+		this.office = office;
+	}
+	public String getRole() {
+		return role;
+	}
+	public void setRole(String role) {
+		this.role = role;
+	}
 	public int getAcademyid() {
 		return academyid;
 	}
@@ -100,10 +114,4 @@ public class UserBean {
 				+ direction + ", phone=" + phone + ", academyid=" + academyid + ", back=" + back + "]";
 	}
 	
-	
-	
-	
-	
-	
-
 }

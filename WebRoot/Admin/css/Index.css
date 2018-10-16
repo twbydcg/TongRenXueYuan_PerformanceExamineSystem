@@ -1,0 +1,128 @@
+/*开始导航栏*/
+header {
+    width:100%;
+    height:70px;
+    background:#2f3437;
+}
+.logo {
+    width:300px;
+    height:70px;
+    background:url("../images/admin_logo.png")no-repeat center center;
+}
+.root_nav {
+    margin-right: 5%;
+}
+.root_nav li {
+    width: 150px;
+    border-left: 1px solid #414141;
+    margin-top:2px;
+}
+
+.root_nav li a {
+    display: block;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    margin:0 auto;
+    padding: 6px;
+    color: rgba(255, 255, 255, 0.60);
+    -webkit-transition: All 1s ease;
+    -moz-transition: All 1s ease;
+    -o-transition:All 1s ease;
+}
+.root_nav li.user a span{
+    text-align:center;
+    display: block;
+    width:100px;
+    margin-left:-50%;
+}
+.root_nav li a .iconfont {
+    font-size:30px;
+}
+.root_nav li:hover a{
+    color: rgba(255, 255, 255, 1);
+}
+/*结束导航栏*/
+
+/*开始侧边导航栏*/
+aside {
+    width:15%;
+    background:#282828;
+    position:relative;
+}
+aside .menu li.index {
+    width: 100%;
+    height: 50px;
+    text-align:center;
+    line-height:50px;
+    border-bottom: 1px solid #b6b6b6 ;
+}
+aside .menu li.scientific {
+    text-align:center;
+    border-bottom: 1px solid #b6b6b6 ;
+    line-height:50px;
+}
+aside .menu li a {
+    color: #ffffff;
+    font-size: 16px;
+}
+aside .menu li a:hover {
+    -webkit-transition: All 1s ease;
+    -moz-transition: All 1s ease;
+    -o-transition:All 1s ease;
+    background: #4d4f53;
+}
+aside .menu li a.hiddle_nav i.icon-shouqi{
+    position:relative;
+    left:15%;
+}
+aside .menu li.index a .iconfont {
+    color: rgb(255, 255, 255);
+}
+aside .menu .aside_nav1 {
+
+    background: rgba(40, 40, 40, 0.8);
+}
+aside .menu .aside_nav1 li.sc_type {
+    text-align:left;
+    margin-left:55px;
+    line-height:40px;
+}
+aside .menu .aside_nav1 li.sc_type .iconfont {
+    color: rgba(255, 255, 255, 0.86);
+}
+aside .menu .aside_nav1 li.sc_type .iconRotate {
+    transform: rotate(90deg);
+    transition: transform 0.5s;
+}
+
+aside .menu .aside_nav2{
+    background: rgba(40, 40, 40, 0.8);
+}
+aside .menu .aside_nav2 li {
+    text-align:left;
+    margin-left: 20px;
+    line-height: 30px;
+}
+aside .menu .aside_nav2 li .iconfont {
+    color: rgb(255, 255, 255);
+}
+aside .menu li .line {
+    margin:0;
+    padding:0;
+    width:100%;
+    height:1px;
+    background:#b6b6b6;
+}
+
+
+/*结束侧边导航栏*/
+
+/*滚动条样式*/
+.scrollDiv{
+    width:8px;
+    position:absolute;
+    top:100px;
+    background: #a92621;
+    border-radius:10px;
+}
