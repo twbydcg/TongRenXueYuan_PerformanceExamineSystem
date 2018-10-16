@@ -76,6 +76,38 @@
     color: #fff;
 }
 
+.nav-top{
+	padding: 0px;
+    margin: 0px;
+    background: #2a2730;
+    list-style: none;
+    
+}
+.nav-top > li{
+	float: right;
+}
+.nav-top > li a{
+	display: block;
+	line-height: 40px;
+    padding: 0px 15px;
+    color: #f7f7f7;
+    text-decoration: none;
+}
+.nav-top > li a:hover{
+    color: #2a2730;
+    background:#f7f7f7;
+    text-decoration: none;
+}
+#btn-menu{
+	float: left;
+	height: 40px;
+	background: #2a2730;
+    color: #f7f7f7;
+    border: 0;
+}
+
+
+
 /**
    <---  /顶部图片区域         -->
  */
@@ -90,7 +122,7 @@ body {
 }
 
 body, html {
-    background-color: #583e7e
+   
 }
 .nvabar-left{
     padding: 20px;
@@ -109,82 +141,125 @@ body, html {
     width: 100%;
 }
 .meun > li,.meun > li a{
+	text-align:center;
     display: block;
 }
 .meun > li a {
     padding: 10px 0px;
-    color: #0f0f0f;
-    border-bottom: 1px solid #2A752E;
+    color: #fff;
+    border-bottom: 1px solid #ccc;
+    font-size:1em;
     letter-spacing:2px;
     text-decoration: none;
+    cursor: pointer;
+    -moz-animation: colorRestore 0.5s;	/* Firefox */
+    -webkit-animation: colorRestore 0.5s;	/* Safari 和 Chrome */
+    -o-animation: colorRestore 0.5s;	/* Opera */
 }
 .meun > li a:hover{
     background: #583E7E;
     color: #f7f7f7;
-    padding-left: 30%;
+    font-size:1.3em;
     text-decoration: none;
-    -moz-animation: colorChange 1s;	/* Firefox */
-    -webkit-animation: colorChange 1s;	/* Safari 和 Chrome */
-    -o-animation: colorChange 1s;	/* Opera */
+    cursor: pointer;
+    -moz-animation: colorChange 0.5s;	/* Firefox */
+    -webkit-animation: colorChange 0.5s;	/* Safari 和 Chrome */
+    -o-animation: colorChange 0.5s;	/* Opera */
 }
+
+
 .meun > li .active{
     background: #59925C;
     color: #f7f7f7;
-    padding-left: 30%;
+    font-size:1.3em;
     text-decoration: none;
 }
 
 .meun-sub{                          /*二级菜单样式*/
-    background: #B1D8B1;
+    background: #555;
+    list-style:none;
+    padding:0px;
     display: none;
 }
 .meun-sub > li a{
     border: 0px;
 }
 .meun-sub > li .active-sub{
-    background: #0099CC;
+    background: #415042;
     color: #f7f7f7;
-    padding-left: 30%;
     text-decoration: none;
 }
 
 .meun-level3{                      /*三级菜单样式*/
-    background: #97bcd8;
+    background: #2a2b2b;
     display: none;
+    list-style: none;
+    text-align: center;
+    padding: 0px;
 }
 .meun-level3 > li a{
     border: 0px;
 }
 .meun-level3 > li .active-level3{
-    background: #583E7E;
+    background: #333333;
     color: #f7f7f7;
-    padding-left: 30%;
     text-decoration: none;
 }
+
+
+/*鼠标进入菜单选项时的动画*/
 @keyframes colorChange
 {
-    from {padding-left: 0%}
-    to {background: #583E7E;padding-left: 30%}
+    from {font-size:1.2em;}
+    to {background: #583E7E;font-size:1.3em;}
 
 }
 
 @-moz-keyframes colorChange /* Firefox */
 {
-    from {padding-left: 0%}
-    to {background: #583E7E;padding-left: 30%}
+    from {font-size:1.2em;}
+    to {background: #583E7E;font-size:1.3em;}
 }
 
 @-webkit-keyframes colorChange /* Safari 和 Chrome */
 {
-    from {padding-left: 0%}
-    to {background: #583E7E;padding-left: 30%}
+    from {font-size:1.2em;}
+    to {background: #583E7E;font-size:1.3em;}
 }
 
 @-o-keyframes colorChange /* Opera */
 {
-    from {padding-left: 0%}
-    to {background: #583E7E;padding-left: 30%}
+    from {font-size:1.2em;}
+    to {background: #583E7E;font-size:1.3em;}
 }
+
+
+/*鼠标离开菜单选项时的动画*/
+@keyframes colorRestore
+{
+    from {font-size:1.3em;}
+    to {font-size:1em;}
+
+}
+
+@-moz-keyframes colorRestore /* Firefox */
+{
+    from {font-size:1.3em;}
+    to {font-size:1em;}
+}
+
+@-webkit-keyframes colorRestore /* Safari 和 Chrome */
+{
+    from {font-size:1.3em;}
+    to {font-size:1em;}
+}
+
+@-o-keyframes colorRestore /* Opera */
+{
+    from {font-size:1.3em;}
+    to {font-size:1em;}
+}
+
 
 .data-min{
     width: 75%;
@@ -215,11 +290,12 @@ body, html {
 }
 .meun-min{
     width: 0%;
+    height:500px;
+    overflow: hidden;
     float: left;
+
     position:absolute;
-    left: -5px;
-    padding-left: 5px;
-    padding-right: 0px;
+    left:-9999px;
     -moz-animation: meunChangeToMin 1s;	/* Firefox */
     -webkit-animation: meunChangeToMin 1s;	/* Safari 和 Chrome */
     -o-animation: meunChangeToMin 1s;	/* Opera */
@@ -246,6 +322,7 @@ body, html {
         -o-animation: meunChangeToMin-moble 1s;	/* Opera */
     }
     .data-max{
+    	
         -moz-animation: dataChangeToMax-moble 1s;	/* Firefox */
         -webkit-animation: dataChangeToMax-moble 1s;	/* Safari 和 Chrome */
         -o-animation: dataChangeToMax-moble 1s;	/* Opera */
@@ -255,27 +332,27 @@ body, html {
 
 @keyframes meunChangeToMin      /*菜单栏转换到隐藏式的动画*/
 {
-    from {width:25%}
-    to {width:0%}
+    from {width:25%;opacity: 1;left: 0px}
+    to {width:0%;opacity: 0;left: 0px}
 
 }
 
 @-moz-keyframes meunChangeToMin /* Firefox */
 {
-    from {width:25%}
-    to {width:0%}
+    from {width:25%;opacity: 1;left: 0px}
+    to {width:0%;opacity: 0;left: 0px}
 }
 
 @-webkit-keyframes meunChangeToMin /* Safari 和 Chrome */
 {
-    from {width:25%}
-    to {width:0%}
+    from {width:25%;opacity: 1;left: 0px}
+    to {width:0%;opacity: 0;left: 0px}
 }
 
 @-o-keyframes meunChangeToMin /* Opera */
 {
-    from {width:25%}
-    to {width:0%}
+    from {width:25%;opacity: 1;left: 0px}
+    to {width:0%;opacity: 0;left: 0px}
 }
 
 @keyframes meunChangeToMax      /*菜单栏转换到显示式的动画*/
@@ -469,7 +546,7 @@ body, html {
 .bs-docs-footer {
     padding-top: 50px;
     padding-bottom: 50px;
-    margin-top: 100px;
+    border-top: 2px solid #ddd;
     color: #99979c;
     text-align: center;
     background-color: #2a2730;

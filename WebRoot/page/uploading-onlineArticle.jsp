@@ -19,8 +19,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </head>
 <body>
 
+<div class="view">
 <div class="topbar"></div>
-<h3 style="text-align: center;">科研成果>>网络论文成果</h3>
+<h3 style="text-align: center;">上传网络论文成果</h3>
 <div class="topbar"></div>
 <div style="width: 100%;padding: 20px">
 
@@ -63,13 +64,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <div class="col-sm-4">
              <select class="form-control" title="请选择你的的学科门类" id="type" name="type">
                 <option value="0" selected="selected" style="display: none" >请选择</option>
-                <!-- 
-                
-                
-                		这里写数据库获取类型的代码
-                
-                
-                 -->
+                <option value="1" >社会科类</option>
+                <option value="2" >自然科类</option>
             </select>
         </div>
         <label for="subject" class="col-sm-2 control-label">一级学科</label>
@@ -87,6 +83,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <div class="col-sm-3">
              <select class="form-control" title="请选择你的署名单位第次" id="level" name="level">
                 <option value="0" selected="selected" style="display: none" >请选择</option>
+                <option value="1"  >第一署名单位</option>
+                <option value="2"  >第二署名单位</option>
+                
                 <!-- 
                 	
                 	这里写署名单位第次的选择  从数据库获取的代码
@@ -101,6 +100,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <div class="col-sm-4">
              <select class="form-control" title="请选择你的版面" id="layout" name="layout">
                 <option value="0" selected="selected" style="display: none" >请选择</option>
+                <option value="1"  >正刊</option>
+                <option value="2"  >增刊</option>
+                
                 <!-- 
                 	
                 	这里写版面选项  从数据库获取的代码
@@ -117,7 +119,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <div class="form-group">
         <label for="ageLimit" class="col-sm-2 control-label">成果所属年限</label>
         <div class="col-sm-4">
-            <input type="date" class="form-control" title="请选择你成果的年限" id="ageLimit" required placeholder="成果所属年限" name="ageLimit">
+            <select class="form-control" id="ageLimit" name="ageLimit">
+               <option value="0" selected="selected" style="display: none">请选择</option>
+               
+               <%
+                for(int i=2018;i<=2028;i++){
+                %>
+                <option value="<%=i%>"><%=i %> 年</option>
+                <%
+                }
+                 %> 
+            </select>
+        
         </div>
                
     </div>
@@ -127,7 +140,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     </div>
 </form>
 </div>
-
+</div>
 
 <script src="<%=path%>/static/jQuery/jquery.min.js" ></script>
 <script src="<%=path%>/static/js/uploading-scientificPayoffs.js"></script>
@@ -158,7 +171,7 @@ function toVaild(){
 		
 		}
 
-
 </script>
+
 </body>
 </html>

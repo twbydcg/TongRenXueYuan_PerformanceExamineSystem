@@ -4,7 +4,7 @@ String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 <!DOCTYPE html>
-<html lang="zh" id="main-view" >
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -33,67 +33,112 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </div>
 <!-- /顶部图片部分 -->
 <!-- 导航栏部分 -->
-<div class="container-fluid" style="margin-top: 50px;">
+<div class="container-fluid">
     <div class="row">
-        <div class="col-sm-3 meun-button">
-            <button class="btn btn-default" onclick="togglrMenu(this)" type="button">隐藏菜单栏  <span class="glyphicon glyphicon-chevron-left"></span></button>
+        <div class="col-sm-12 nav-top">
+        	<button id="btn-menu" class="btn btn-default" onclick="togglrMenu(this)" type="button">隐藏菜单栏  <span class="glyphicon glyphicon-chevron-left"></span></button>
+       		<ul class="nav-top">
+       			 <li><a href="javascript:void(0)" onmousedown="cheked(this,9);"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;用户中心</a></li>
+           		 <li><a href="javascript:void(0)" onmousedown="cheked(this,10);"><span class="glyphicon glyphicon-off" aria-hidden="true"></span>&nbsp;&nbsp;退出</a></li>
+       		</ul>
         </div>
     </div>
     <div class="row">
-    <div class="meun-max nvabar-left" id="meunView" style="background: #ccffcc;overflow-y: auto; height: 1000px;">
+    <div class="meun-max nvabar-left" id="meunView" style="background: #2a2730;"  >
         <ul class="meun">
-            <li><a href="javascript:void(0)" class="active" onclick="cheked(this,1);"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span>&nbsp;&nbsp;个人成果排行</a></li>
-            <li><a href="javascript:void(0)" onclick="cheked(this,2);"><span class="iconfont" aria-hidden="true">&#xe607;</span>&nbsp;&nbsp;科研成果</a>
+            <li><a href="javascript:void(0)" class="active" onmousedown="cheked(this,1);"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span>&nbsp;&nbsp;个人成果排行</a></li>
+            <li><a href="javascript:void(0)" onclick="cheked(this,2);"><span class="iconfont" aria-hidden="true">&#xe607;</span>&nbsp;&nbsp;科研成果&nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></a>
                 <ul class="meun-sub">
-                    <li><a href="javascript:void(0)" onclick="subcheked(this,1);" >论文类成果</a></li>
-                    <li><a href="javascript:void(0)" onclick="subcheked(this,2);" >网络文章成果</a></li>
-                    <li><a href="javascript:void(0)" onclick="subcheked(this,3);" >项目类成果</a></li>
-                    <li><a href="javascript:void(0)" onclick="subcheked(this,4);" >获奖类成果</a></li>
-                    <li><a href="javascript:void(0)" onclick="subcheked(this,5);" >著作出版成果</a></li>
-                    <li><a href="javascript:void(0)" onclick="subcheked(this,6);" >科技及文化创新成果</a></li>
-                    <li><a href="javascript:void(0)" onclick="subcheked(this,7);" >荣誉类成果</a></li>
-                    <li><a href="javascript:void(0)" onclick="subcheked(this,8);" >学术活动成果</a></li>
-                    <li><a href="javascript:void(0)" onclick="subcheked(this,9);" >指导学术类成果</a></li>
-                    <li><a href="javascript:void(0)" onclick="subcheked(this,10);" >服务社会类成果</a></li>
-                    <li><a href="javascript:void(0)" onclick="subcheked(this,11);" >教学任务积分量化</a></li>
-                </ul>
-            </li>
-            <li><a href="javascript:void(0)" onclick="cheked(this,3);"><span class="iconfont" aria-hidden="true">&#xe658;</span>&nbsp;&nbsp;社会服务成果</a></li>
-            <li><a href="javascript:void(0)" onclick="cheked(this,4);"><span class="iconfont" aria-hidden="true">&#xe604;</span>&nbsp;&nbsp;学科建设成果</a></li>
-            <li><a href="javascript:void(0)" onclick="cheked(this,5);"><span class="iconfont" aria-hidden="true">&#xe60c;</span>&nbsp;&nbsp;(兼)行政管理业绩</a></li>
-            <li><a href="javascript:void(0)" onclick="cheked(this,6);"><span class="glyphicon glyphicon-option-horizontal" aria-hidden="true"></span>&nbsp;&nbsp;其他业绩成果</a></li>
-            
-            <li><a href="javascript:void(0)" onclick="cheked(this,7);"><span class="glyphicon glyphicon-open" aria-hidden="true"></span>&nbsp;&nbsp;上传</a>
-                <ul class="meun-sub">
-                    <li><a href="javascript:void(0)"  onclick="subcheked(this,11);" >科研成果</a>
-                        <ul class="meun-level3">
-                            <li><a href="javascript:void(0)" onclick="level3cheked(this,1);">论文类成果</a></li>
-                            <li><a href="javascript:void(0)" onclick="level3cheked(this,2);" >网络文章成果</a></li>
-                            <li><a href="javascript:void(0)" onclick="level3cheked(this,3);">项目类成果</a></li>
-                            <li><a href="javascript:void(0)" onclick="level3cheked(this,4);">获奖类成果</a></li>
-                            <li><a href="javascript:void(0)" onclick="level3cheked(this,5);">著作出版成果</a></li>
-                            <li><a href="javascript:void(0)" onclick="level3cheked(this,6);">科技及文化创新成果</a></li>
-                            <li><a href="javascript:void(0)" onclick="level3cheked(this,7);">荣誉类成果</a></li>
-                            <li><a href="javascript:void(0)" onclick="level3cheked(this,8);">学术活动成果</a></li>
-                            <li><a href="javascript:void(0)" onclick="level3cheked(this,9);">指导学术类成果</a></li>
-                            <li><a href="javascript:void(0)" onclick="level3cheked(this,10);">服务社会类成果</a></li>
-                            <li><a href="javascript:void(0)" onclick="level3cheked(this,11);">教学任务积分量化</a></li>
+                    <li><a href="javascript:void(0)" onmousedown="subcheked(this,1);" >论文类成果</a>
+                    	<ul class="meun-level3">
+                            <li><a href="javascript:void(0)" onmousedown="" ><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>&nbsp;&nbsp;修改</a></li>
+                             <li><a href="javascript:void(0)" onmousedown="level3cheked(this,1);" ><span class="glyphicon glyphicon-open" aria-hidden="true"></span>&nbsp;&nbsp;上传</a></li>
                         </ul>
                     </li>
-                    <li><a href="javascript:void(0)" onclick="subcheked(this,12);">社会服务成果</a></li>
-                    <li><a href="javascript:void(0)" onclick="subcheked(this,13);">学科建设成果</a></li>
-                    <li><a href="javascript:void(0)" onclick="subcheked(this,14);">(兼)行政管理业绩</a></li>
-                    <li><a href="javascript:void(0)" onclick="subcheked(this,15);">其他业绩成果</a></li>
+                    <li><a href="javascript:void(0)" onmousedown="subcheked(this,2);" >网络文章成果</a>
+                    	<ul class="meun-level3">
+                    		<li><a href="javascript:void(0)" onmousedown="" ><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>&nbsp;&nbsp;修改</a></li>
+                            <li><a href="javascript:void(0)" onmousedown="level3cheked(this,2);" ><span class="glyphicon glyphicon-open" aria-hidden="true"></span>&nbsp;&nbsp;上传</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:void(0)" onmousedown="subcheked(this,3);" >项目类成果</a>
+                    	<ul class="meun-level3">
+                    		<li><a href="javascript:void(0)" onmousedown="" ><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>&nbsp;&nbsp;修改</a></li>
+                            <li><a href="javascript:void(0)" onmousedown="level3cheked(this,3);" ><span class="glyphicon glyphicon-open" aria-hidden="true"></span>&nbsp;&nbsp;上传</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:void(0)" onmousedown="subcheked(this,4);" >获奖类成果</a>
+                    	<ul class="meun-level3">
+                    		<li><a href="javascript:void(0)" onmousedown="" ><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>&nbsp;&nbsp;修改</a></li>
+                            <li><a href="javascript:void(0)" onmousedown="level3cheked(this,4);" ><span class="glyphicon glyphicon-open" aria-hidden="true"></span>&nbsp;&nbsp;上传</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:void(0)" onmousedown="subcheked(this,5);" >著作出版成果</a>
+                    	<ul class="meun-level3">
+                    		<li><a href="javascript:void(0)" onmousedown="" ><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>&nbsp;&nbsp;修改</a></li>
+                            <li><a href="javascript:void(0)" onmousedown="level3cheked(this,5);" ><span class="glyphicon glyphicon-open" aria-hidden="true"></span>&nbsp;&nbsp;上传</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:void(0)" onmousedown="subcheked(this,6);" >科技及文化创新成果</a>
+                    	<ul class="meun-level3">
+                    		<li><a href="javascript:void(0)" onmousedown="" ><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>&nbsp;&nbsp;修改</a></li>
+                            <li><a href="javascript:void(0)" onmousedown="level3cheked(this,6);" ><span class="glyphicon glyphicon-open" aria-hidden="true"></span>&nbsp;&nbsp;上传</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:void(0)" onmousedown="subcheked(this,7);" >荣誉类成果</a>
+                    	<ul class="meun-level3">
+                    		<li><a href="javascript:void(0)" onmousedown="" ><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>&nbsp;&nbsp;修改</a></li>
+                            <li><a href="javascript:void(0)" onmousedown="level3cheked(this,7);" ><span class="glyphicon glyphicon-open" aria-hidden="true"></span>&nbsp;&nbsp;上传</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:void(0)" onmousedown="subcheked(this,8);" >学术活动成果</a>
+                    	<ul class="meun-level3">
+                    		<li><a href="javascript:void(0)" onmousedown="" ><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>&nbsp;&nbsp;修改</a></li>
+                            <li><a href="javascript:void(0)" onmousedown="level3cheked(this,8);" ><span class="glyphicon glyphicon-open" aria-hidden="true"></span>&nbsp;&nbsp;上传</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:void(0)" onmousedown="subcheked(this,9);" >指导学术类成果</a>
+                    	<ul class="meun-level3">
+                    		<li><a href="javascript:void(0)" onmousedown="" ><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>&nbsp;&nbsp;修改</a></li>
+                            <li><a href="javascript:void(0)" onmousedown="level3cheked(this,9);" ><span class="glyphicon glyphicon-open" aria-hidden="true"></span>&nbsp;&nbsp;上传</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:void(0)" onmousedown="subcheked(this,10);" >服务社会类成果</a>
+                    	<ul class="meun-level3">
+                    		<li><a href="javascript:void(0)" onmousedown="" ><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>&nbsp;&nbsp;修改</a></li>
+                            <li><a href="javascript:void(0)" onmousedown="level3cheked(this,10);" ><span class="glyphicon glyphicon-open" aria-hidden="true"></span>&nbsp;&nbsp;上传</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:void(0)" onmousedown="subcheked(this,11);" >教学任务积分量化</a>
+                    	<ul class="meun-level3">
+                    		<li><a href="javascript:void(0)" onmousedown="" ><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>&nbsp;&nbsp;修改</a></li>
+                            <li><a href="javascript:void(0)" onmousedown="level3cheked(this,11);" ><span class="glyphicon glyphicon-open" aria-hidden="true"></span>&nbsp;&nbsp;上传</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </li>
-            
-            <li><a href="javascript:void(0)" onclick="cheked(this,8);"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;用户中心</a></li>
-            <li><a href="javascript:void(0)" onclick="cheked(this,9);"><span class="glyphicon glyphicon-off" aria-hidden="true"></span>&nbsp;&nbsp;退出</a></li>
+             <li><a href="javascript:void(0)" onmousedown="cheked(this,3);"><span class="iconfont" aria-hidden="true">&#xe658;</span>&nbsp;&nbsp;教学成果&nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span></a>
+                 <ul class="meun-sub">
+                    <li><a href="javascript:void(0)" onmousedown="subcheked(this,1);" >教改论文</a></li>
+                    <li><a href="javascript:void(0)" onmousedown="subcheked(this,2);" >教改项目</a></li>
+                    <li><a href="javascript:void(0)" onmousedown="subcheked(this,3);" >教改平台</a></li>
+                    <li><a href="javascript:void(0)" onmousedown="subcheked(this,4);" >纵向项目</a></li>
+                    <li><a href="javascript:void(0)" onmousedown="subcheked(this,5);" >著作成果</a></li>
+                    <li><a href="javascript:void(0)" onmousedown="subcheked(this,6);" >专利成果</a></li>
+                    <li><a href="javascript:void(0)" onmousedown="subcheked(this,7);" >网络文章成果</a></li>
+                    <li><a href="javascript:void(0)" onmousedown="subcheked(this,8);" >文体艺术成果</a></li>
+                    <li><a href="javascript:void(0)" onmousedown="subcheked(this,9);" >教改成果</a></li>
+                </ul>
+             </li>
+            <li><a href="javascript:void(0)" onmousedown="cheked(this,4);"><span class="iconfont" aria-hidden="true">&#xe658;</span>&nbsp;&nbsp;社会服务成果</a></li>
+            <li><a href="javascript:void(0)" onmousedown="cheked(this,5);"><span class="iconfont" aria-hidden="true">&#xe604;</span>&nbsp;&nbsp;学科建设成果</a></li>
+            <li><a href="javascript:void(0)" onmousedown="cheked(this,6);"><span class="iconfont" aria-hidden="true">&#xe60c;</span>&nbsp;&nbsp;(兼)行政管理业绩</a></li>
+            <li><a href="javascript:void(0)" onmousedown="cheked(this,7);"><span class="glyphicon glyphicon-option-horizontal" aria-hidden="true"></span>&nbsp;&nbsp;其他业绩成果</a></li>
         </ul>
     </div>
     <!-- /导航栏部分 -->
     <!--  内容部分  -->
-        <div id="data" class="data-min" style="height: 1000px;" >
+        <div id="data" class="data-min" style="height: 500px;" >
 
             <iframe name="myiframe" id="myrame" src="page/ranking.html"
                     frameborder="0" align="left" width="100%" height="100%" scrolling="auto"></iframe>
