@@ -1,3 +1,9 @@
+$(document).ready(function(){
+	
+    autoHeight();
+	$(".meun a").mouseup(autoHeight);
+});
+
 
 function cheked(a,index) {
     var elemt=$(a);//当前选择的对象
@@ -21,7 +27,7 @@ function cheked(a,index) {
     
     var iframe=$("#myrame");
     switch (index) {
-        case 1:$(".active-sub").removeClass("active-sub");iframe.attr("src","page/ranking.html");break;
+        case 1:$(".active-sub").removeClass("active-sub");iframe.attr("src","page/Scientific/lookOver/ranking.html");break;
         case 2:break;
         case 3:break;
         case 4:$(".active-sub").removeClass("active-sub");iframe.attr("src","page/null.html");break;
@@ -49,11 +55,7 @@ function subcheked(a,subIndex) {
     $(".active-level3").removeClass("active-level3");
     var iframe=$("#myrame");
     switch (subIndex) {
-<<<<<<< HEAD
-        
-        default:break;
-=======
-        case 1:iframe.attr("src","page/scientificPayoffs.jsp");break;
+        case 1:/*iframe.attr("src","page/Scientific/lookOver/scientificPayoffs.jsp");*/break;
         case 2:iframe.attr("src","page/null.html");break;
         case 3:iframe.attr("src","page/null.html");break;
         case 4:iframe.attr("src","page/null.html");break;
@@ -65,7 +67,6 @@ function subcheked(a,subIndex) {
         case 10:iframe.attr("src","page/null.html");break;
         case 11:iframe.attr("src","page/null.html");break;
         default:iframe.attr("src","page/null.html");break;
->>>>>>> dc5cc0a8e3cfcebf47470422e25e08f6594f21a8
     }
     
     
@@ -85,9 +86,9 @@ function level3cheked(a,level3Index) {
     var iframe=$("#myrame");
    
     switch (level3Index) {
-        case 1:iframe.attr("src","page/uploading-scientificPayoffs.jsp");break;
-        case 2:iframe.attr("src","page/uploading-onlineArticle.jsp");break;
-        case 3:iframe.attr("src","page/null.html");break;
+        case 1:iframe.attr("src","page/Scientific/upload/academicPaper.jsp");break;
+        case 2:iframe.attr("src","page/Scientific/upload/onlineArticle.jsp");break;
+        case 3:iframe.attr("src","page/Scientific/upload/resultDiploma.jsp");break;
         case 4:iframe.attr("src","page/null.html");break;
         case 5:iframe.attr("src","page/null.html");break;
         case 6:iframe.attr("src","page/null.html");break;
@@ -101,24 +102,32 @@ function level3cheked(a,level3Index) {
     
 }
 
-$(document).ready(function(){
-	
-    autoHeight();
-	$(".meun a").mouseup(autoHeight);
-});
+
 
 function autoHeight(){
 	var iframe=$("#myrame");
-	var iframeHeigth=iframeHeigth = iframe.contents().find(".view").height()+40;
-	if(iframeHeigth<357){
-		iframeHeigth=357;
+	var meun=$("#meunView");
+	var iframeHeigth=iframe.contents().find(".view").height()+40;
+
+	if($(".meun-max").length > 0){
+		if(iframeHeigth>1000){
+			meun.css("height",iframeHeigth);
+		}else{
+			meun.css("height","1000px");
+		}
+	}else{
+		meun.css("height",iframeHeigth);
 	}
-    $("#data").animate({height: iframeHeigth});
+	
+    $("#data").css("height",iframeHeigth);
+    
    
 }
 
 
 function togglrMenu(btn) {
+	var iframe=$("#myrame");
+	var iframeHeigth;
     var meun =$(".meun-max");
     var data;
     var btn=$(btn);
@@ -129,6 +138,13 @@ function togglrMenu(btn) {
         data.removeClass("data-min");
         data.addClass("data-max");
         btn.html("显示菜单栏  <span class='glyphicon glyphicon-chevron-right'></span>");
+        $("#meunView").css("height","0px");
+
+        setTimeout(function () { 
+           
+            autoHeight();
+        }, 1000);
+        
     }else{
         meun =$(".meun-min");
         meun.removeClass("meun-min");
@@ -137,6 +153,13 @@ function togglrMenu(btn) {
         data.removeClass("data-max");
         data.addClass("data-min");
         btn.html("隐藏菜单栏  <span class='glyphicon glyphicon-chevron-left'></span>");
+        $("#meunView").css("height","1000px");
+        setTimeout(function () { 
+        	 
+        	autoHeight();
+        }, 1000);
+       
     }
+
     
 }
