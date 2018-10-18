@@ -49,10 +49,7 @@ function subcheked(a,subIndex) {
     $(".active-level3").removeClass("active-level3");
     var iframe=$("#myrame");
     switch (subIndex) {
-<<<<<<< HEAD
-        
         default:break;
-=======
         case 1:iframe.attr("src","page/scientificPayoffs.jsp");break;
         case 2:iframe.attr("src","page/null.html");break;
         case 3:iframe.attr("src","page/null.html");break;
@@ -64,8 +61,9 @@ function subcheked(a,subIndex) {
         case 9:iframe.attr("src","page/null.html");break;
         case 10:iframe.attr("src","page/null.html");break;
         case 11:iframe.attr("src","page/null.html");break;
-        default:iframe.attr("src","page/null.html");break;
->>>>>>> dc5cc0a8e3cfcebf47470422e25e08f6594f21a8
+//        default:
+//        	iframe.attr("src","page/null.html");
+//        break;
     }
     
     
