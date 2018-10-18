@@ -44,7 +44,6 @@ CategoregradeDao categoregradeDao=new CategoregradeDao();
             <th>本人等级</th>
             <th>学校署名</th>
             <th>出版时间</th>
-            
             <th>项目来源</th>
             <th>刊物类型</th>
             <th>刊物类型等级</th>
@@ -58,7 +57,7 @@ CategoregradeDao categoregradeDao=new CategoregradeDao();
         <tr>
         </thead>
         <tbody>
-        <% 
+       <%--  <% 
         int i=0;
         if(academicPaper.size()>0){
         for(AcademicPaperBean a:academicPaper){
@@ -87,7 +86,7 @@ CategoregradeDao categoregradeDao=new CategoregradeDao();
         <%
         }
         }
-        %>
+        %> --%>
         </tbody>
     </table>
 </div>

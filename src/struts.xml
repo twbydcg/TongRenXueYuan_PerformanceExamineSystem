@@ -6,6 +6,13 @@
 		<action name="paperRegiter" class="cn.trxy.controller.AcademicPaperController" method="paperRegiter">
 			<result name="home/index">/page/uploading-scientificPayoffs.jsp</result>
 		</action>
+			<!-- 添加 -->
+		<action name="add" class="cn.trxy.controller.XslwController" method="add">
+			<result name="lookOver/scientificPayoffs">/page/Scientific/lookOver/scientificPayoffs.jsp</result>
+			<result name="upload/back">/page/Scientific/upload/academicPaper.jsp</result>
+		</action>
+			<!-- 改变审核状态 -->
+			<action name="updateStatu" class="cn.trxy.controller.XslwController" method="updateStatu"></action>
 		<!-- 用户作者 -->
 		<action name="checkLogin" class="cn.trxy.controller.UserController" method="checkLogin">
 			<result name="home/index">/WEB-INF/index.jsp</result><!--验证成功页面  -->

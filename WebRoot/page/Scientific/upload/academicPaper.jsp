@@ -16,7 +16,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <title>竞聘系统</title>
 	<link rel="stylesheet" href="<%=path%>/static/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="<%=path%>/css/page-style.css">
-
 </head>
 
 <body>
@@ -26,14 +25,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <div class="topbar"></div>
 <div style="width: 100%;padding: 20px" >
 
-<form class="form-horizontal form-signin" action=" <%=path%>/paperRegiter.action" method="post" onsubmit="return toVaild()" >
+<form class="form-horizontal form-signin" action=" <%=path%>/add.action" method="post" onsubmit="return toVaild()" >
     <div class="form-group">
         <label for="subject" class="col-sm-2 control-label">论文类型</label>
         <div class="col-sm-4">
-	        	<select class="form-control" id="subject"  name="papertype" >
+	        	<select class="form-control" id="subject"  name="xslw.lwlx" >
 	              <option value="0" selected="selected" style="display: none">请选择</option>
-	              <option value="1" >教改论文</option>
-	              <option value="2" >科研论文</option>
+	              <option value="教改论文" >教改论文</option>
+	              <option value="科研论文" >科研论文</option>
 	             
 	                <%-- <% 
 	                for(PapertypeBean p:papertype){
@@ -46,7 +45,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         </div>
          <label for="type" class="col-sm-2 control-label">项目来源</label>
        <div class="col-sm-3">
-             <select class="form-control" id="type" name="projectsource">
+             <select class="form-control" id="type" name="xslw.xmly">
                 <option value="0" selected="selected" style="display: none">请选择</option>
                 <option value="1" >国家级</option>
                 <option value="2" >省级</option>
@@ -67,11 +66,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <div class="form-group">
     <label for="title" class="col-sm-2 control-label">论文题目</label>
         <div class="col-sm-4">
-           <input type="text" class="form-control" id="title" required placeholder="论文题目" name="papertitle">
+           <input type="text" class="form-control" id="title" required placeholder="论文题目" name="xslw.lwtm">
         </div>
         <label for="schoolsign" class="col-sm-2 control-label">学校署名</label>
         <div class="col-sm-3">
-            <select class="form-control" id="schoolsign" name="schoolsign">
+            <select class="form-control" id="schoolsign" name="xslw.smdwcd">
                 <option value="0" selected="selected" style="display: none">请选择</option>
                 <option value="1" >第一署名单位</option>
                 <option value="2" >第二署名单位</option>
@@ -90,7 +89,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <div class="form-group">
         <label for="yearlimit" class="col-sm-2 control-label">论文年限</label>
         <div class="col-sm-4">
-            <select class="form-control" id="yearlimit" name="yearlimit">
+            <select class="form-control" id="yearlimit" name="xslw.cgsbnx">
                <option value="0" selected="selected" style="display: none">请选择</option>
                
                <%
@@ -104,14 +103,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         </div>
         <label for="correspondingAuthor" class="col-sm-2 control-label">期号</label>
         <div class="col-sm-3">
-            <input type="text" class="form-control" id="correspondingAuthor" required placeholder="期号" name="number">
+            <input type="text" class="form-control" id="correspondingAuthor" required placeholder="期号" name="xslw.qh">
         </div>
     </div>
    
     <div class="form-group">
         <label for="category" class="col-sm-2 control-label">刊物类型</label>
         <div class="col-sm-2">
-            <select class="form-control" id="category" name="category"  onchange="change();">
+            <select class="form-control" id="category" name="xslw.kwlx"  onchange="change();">
                 <option value="0" selected="selected" style="display: none">请选择</option>
                 <option value ="1"  >Science和Nature</option>
                 <option value="2"  >国内期刊</option>
@@ -130,29 +129,29 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         </div>
         <label for="resultCode" class="col-sm-2 control-label">成果对应积分</label>
         <div class="col-sm-3">
-        	<input type="text" readonly="readonly"  style="background-color:yellow" class="form-control" id="resultCode"  onkeyup="Calculation();" name="resultCode">
+        	<input type="text" readonly="readonly"  style="background-color:yellow" class="form-control" id="resultCode"  onkeyup="Calculation();" name="xslw.ysjf">
         </div>   
     </div>
     
    <div class="form-group">
         <label for="firstauthor" class="col-sm-2 control-label">第一作者</label>
         <div class="col-sm-4">
-             <input type="text" class="form-control" id="firstauthor" required placeholder="第一作者" name="firstauthor"> 
+             <input type="text" class="form-control" id="firstauthor" required placeholder="第一作者" name="xslw.dyzz"> 
         </div>
        <label for="time" class="col-sm-2 control-label">出版时间</label>
         <div class="col-sm-3">
-            <input type="date" class="form-control" id="time" required placeholder="出版时间" name="publishdate">
+            <input type="date" class="form-control" id="time" required placeholder="出版时间" name="xslw.fbsj">
         </div>     
     </div>
     
     <div class="form-group">
         <label for="messageauthor" class="col-sm-2 control-label">通讯作者</label>
         <div class="col-sm-4">
-         <input type="text" class="form-control" id="messageauthor" placeholder="通讯作者" name="messageauthor"> 
+         <input type="text" class="form-control" id="messageauthor" placeholder="通讯作者" name="xslw.txzz"> 
         </div>
         <label for="layout" class="col-sm-2 control-label">版面</label>
         <div class="col-sm-3">
-             <select class="form-control" id="layout" name="layout">
+             <select class="form-control" id="layout" name="xslw.bm">
                 <option value="0" selected="selected" style="display: none">请选择</option>
                 <option value="1" >正刊</option>
                 <option value="2" >增刊</option>
@@ -164,18 +163,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <div class="form-group">
         <label for="authorgrade" class="col-sm-2 control-label">作者等级</label>
         <div class="col-sm-4">
-             <select class="form-control" id="authorgrade" name="authorgrade">
-<<<<<<< HEAD
+             <select class="form-control" id="authorgrade" name="xslw.brsmcd">
                 <option value="0" selected="selected" style="display: none">请选择</option>
                 <option value="1" >第一作者</option>
                 <option value="2" >第二作者</option>
                 <option value="3" >通讯作者</option>
                 
                <%-- <% 
-=======
                 <option value="0" selected="selected" style="display: none">请选择</option>     
                <% 
->>>>>>> dc5cc0a8e3cfcebf47470422e25e08f6594f21a8
 	                for(AhthorunitBean p:ahthorunit){
 	                %>
 	                <option value="<%=p.getName()%>"><%=p.getName() %></option>
@@ -186,19 +182,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         </div>
        <label for="yourCode" class="col-sm-2 control-label">所得积分</label>
         <div class="col-sm-3">
-        	<input type="text" readonly="readonly"  style="background-color:red" class="form-control" id="yourCode"  onkeyup="Calculation1();" name="yourCode">
+        	<input type="text" readonly="readonly"  style="background-color:red" class="form-control" id="yourCode"  onkeyup="Calculation1();" name="xslw.sdjf">
         </div>   
     </div>    
     
     <div class="form-group">
-    
+ 
         <label for="ISSNnumber" class="col-sm-2 control-label">ISSN号</label>
         <div class="col-sm-4">
-        	<input type="text" class="form-control" id="ISSNnumber" required placeholder="ISSN号" name="ISSNnumber">
+        	<input type="text" class="form-control" id="ISSNnumber" required placeholder="ISSN号" name="xslw.issnh">
         </div> 
          <label for="firstproject" class="col-sm-2 control-label">学科门类</label>
         <div class="col-sm-3">
-             <select class="form-control" id="firstproject" name="firstproject">
+             <select class="form-control" id="firstproject" name="xslw.xkml">
                 <option value="0" selected="selected" style="display: none">请选择</option>
                 <option value="1" >自然科学</option>
                 <option value="2" >社会科学</option>
@@ -210,17 +206,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
      <div class="form-group">
       <label for="cnNumber" class="col-sm-2 control-label">CN号</label>
         <div class="col-sm-4">
-             <input type="text" class="form-control" id="cnNumber" required placeholder="CN号" name="cnNumber"> 
+             <input type="text" class="form-control" id="cnNumber" required placeholder="CN号" name="xslw.cnh"> 
         </div> 
         <label for="yourfile" class="col-sm-2 control-label">附件</label>
         <div class="col-sm-3">
-            <input type="file" class="form-control" id="yourfile" required placeholder="附件" name="yourfile">
+            <input type="file" class="form-control" id="yourfile" required placeholder="附件" name="xslw.fj">
         </div>  
     </div>
     <div class="form-group">
         <label for="remark" class="col-sm-2 control-label">备注</label>
         <div class="col-xs-10 col-xs-offset-1">
-            <textarea id="remark"  style="width: 100%;height: 100px"></textarea>
+            <textarea id="remark"  style="width: 100%;height: 100px" name="xslw.bz"></textarea>
         </div>
     </div>
     

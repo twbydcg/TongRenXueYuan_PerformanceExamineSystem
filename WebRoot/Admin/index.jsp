@@ -1,3 +1,11 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8" %>
+<%@ page import="cn.trxy.bean.*"  %>
+<%@ page import="cn.trxy.dao.*"  %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c" %>
+<% 
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
+%>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -11,14 +19,12 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="css/Common.css"/>
     <link rel="stylesheet" type="text/css" href="css/Index.css"/>
-    <link rel="stylesheet" type="text/css" href="css/Secientific.css"/>
+    <link rel="stylesheet" type="text/css" href="css/Home.css"/>
     <link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
     <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
     <script type="text/javascript" src="js/Nav.js"></script>
-    <script type="text/javascript" src="js/ShelWin.js"></script>
 </head>
-<body class="bg">
-<!--科研论文-->
+<body>
 <!--开始头部-->
 <header>
     <!--开始系统logo-->
@@ -73,7 +79,7 @@
                 <!--开始下拉菜单科研论文-->
                 <li class="sc_type" >
                     <i class="iconfont icon-1"></i>
-                    <a href="ScientificPapers.html" class="title_mid">科研论文</a>
+                    <a href="ScientificPapers.jsp" class="title_mid">学术论文</a>
                 </li>
                 <!--结束下拉菜单科研论文-->
 
@@ -294,102 +300,62 @@
 </aside>
 <!--结束侧边导航栏-->
 
-<!--开始教改论文-->
+<!--开始起始页面-->
 <div class="content_rt fl">
     <div class="r_position">
-        <i class="iconfont icon-weizhi"></i>
-        <span>你的位置: 首页 > 教改论文</span>
+        <i class="iconfont icon-luru"></i>
+        <span>系统工能介绍</span>
     </div>
-    <div class="r_table">
-        <div class="t_title">
+    <!--开始系统提示信息-->
+    <div class="r_message">
+        <div class="m_list m_1">
             <i></i>
-            <p>教改论文</p>
+            <div class="l_info">
+                <span>100</span>
+                <p>修改申请数</p>
+            </div>
         </div>
-        <div class="t_label">
-            <ul>
-                <li>
-                    <a href="#"><!--以多页面形式来写-->
-                        <i class="iconfont icon-wangongyishenhe-copy"></i>
-                        <span>已审核(100)</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="iconfont icon-wangongweishenhe-copy"></i>
-                        <span>未审核(10)</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="iconfont icon-daochu"></i>
-                        <span>导出数据</span>
-                    </a>
-                </li>
-            </ul>
+        <div class="m_list m_2">
+            <i></i>
+            <div class="l_info">
+                <span>400</span>
+                <p>需要审核人数</p>
+            </div>
         </div>
-        <div class="t_search">
-            <input type="button" value="GO" class="s_btn">
-            <input type="text" class="s_text" />
+        <div class="m_list m_3">
+            <i></i>
+            <div class="l_info">
+                <span>1500</span>
+                <p>所用用户数</p>
+            </div>
         </div>
-        <div class="clear"></div>
-        <div class="t_table_list">
-            <table class="t_tab">
-                <thead>
-                <tr>
-                    <th>所属单位</th>
-                    <th>成果所属年限</th>
-                    <th>论文题目</th>
-                    <th>第一作者</th>
-                    <th>署名单位次第</th>
-                    <th>发表/出版时间</th>
-                    <th>学科门类</th>
-                    <th>项目来源</th>
-                    <th>审核状态</th>
-                    <th class="t_action">操作</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>铜仁学院</td>
-                    <td>2018/8/6</td>
-                    <td>关于区块链</td>
-                    <td>王春春</td>
-                    <td>铜仁学院大数据学院</td>
-                    <td>2018/5/2</td>
-                    <td>自然科学</td>
-                    <td>国家级</td>
-                    <td>未通过</td>
-                    <td>
-                        <div class="t_tools">
-                            <!--查看-->
-                            <a href="javascript:OpenWindow('detailed.html')" class="t_see" title="查看详细" >
-                                <i class="iconfont icon-chakan"></i>
-                            </a>
-                            <!--通过-->
-                            <a href="#" class="t_edit" title="通过">
-                                <i class="iconfont icon-tongguo"></i>
-                            </a>
-                            <!--不通过-->
-                            <a href="#" class="t_save" title="不通过">
-                                <i class="iconfont icon-butongguo"></i>
-                            </a>
-                        </div>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
+        <div class="m_list m_4">
+            <i></i>
+            <div class="l_info">
+                <span>100</span>
+                <p>当前在线人数</p>
+            </div>
         </div>
-        <!--开始页数-->
-        <div class="pages">
-            <a>上一页</a>
-            <a>1</a>
-            <a>...</a>
-            <a>下一页</a>
+        <div class="m_list m_5">
+            <i></i>
+            <div class="l_info">
+                <span>1005</span>
+                <p>今日访问量</p>
+            </div>
         </div>
-        <!--结束页数-->
     </div>
+    <!--结束系统提示信息-->
+    <div class="clearfix"></div>
+    <!--开始用户须知-->
+    <div class="message_info">
+        <span>注意事项:</span>
+        <p>1、不能随便攻击网站</p>
+        <p>2、不能盗取别人密码</p>
+        <p>3、如果出现bug请联系</p>
+        <p>4、如果出现问题请联系</p>
+    </div>
+    <!--结束用户须知-->
 </div>
-<!--结束教改论文-->
-
+<!--结束起始页面-->
 </body>
 </html>
